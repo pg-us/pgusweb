@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+{%load markup%}
+{%block title%}Upcoming Events{%endblock%}
+{%block layoutblock%}
+<section id="three" class="wrapper">
+  <div class="inner">
+    <header class="align-center">
+      <h2>upcoming events</h2>
+    </header>
+    {%for event in events %}
+    <header>
+      <h3><a href="/events/{{event.id}}">{{event.title}}</a></h3>
+    </header>
+    <b>Location: {{event.full_location}}</b>
+    <br>
+    <b>Date: {{event.pretty_date}}</b>
+    <p>
+      {{event.summary|markdown}}
+    </p>
+    {%endfor%}
+  </div>
+</section>
+{%endblock%}
+

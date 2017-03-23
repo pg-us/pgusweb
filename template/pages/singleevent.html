@@ -1,0 +1,16 @@
+{%extends "base.html" %}
+{%load markup%}
+{%block title%}Latest News{%endblock%}
+{%block layoutblock%}
+<!-- News -->
+<section id="three" class="wrapper special style2">
+  <div class="inner">
+    <div id="news">
+      <header class="align-center">
+        <h2>{{obj.title}}</h2>
+      </header>
+      {%include "pieces/event_description.html"%}
+    </div>
+  </div>
+</section>
+{%endblock%}

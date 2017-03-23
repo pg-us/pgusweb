@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<!--
+    Theory by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+    Adaptation by Sarah Conway
+-->
+<html>
+  <head>
+    <title>PgUS - {%block title%}{%endblock%}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/media/css/main.css" />
+{%block extrahead%}{%endblock%}
+  </head>
+  <body>
+    <!-- Banner -->
+    <section id="banner">
+      <h1>United States PostgreSQL Association (PgUS)</h1>
+    </section>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="/" class="logo">PgUS</a>
+        <nav id="nav">
+          <a href="/">home</a>
+          <a href="/aboutus">about us</a>
+          <a href="/financialsupport">financial support</a>
+          <a href="/corporate">corporate</a>
+          <a href="/becomeamember">become a member</a>
+          <a href="/contactus">contact us</a>
+          <a href="/membership">your membership</a>
+          {%if user.is_authenticated %}<a href="/logout">log out</a>{%endif%}
+        </nav>
+        <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+      </div>
+    </header>
+
+    {%block layoutblock%}{%endblock%}
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="flex">
+          <div class="copyright">
+            &copy; 2015-2017 United States PostgreSQL Association
+          </div>
+          <ul class="icons">
+            <li><a href="https://twitter.com/pgus" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/media/js/jquery.min.js"></script>
+    <script src="/media/js/skel.min.js"></script>
+    <script src="/media/js/util.js"></script>
+    <script src="/media/js/main.js"></script>
+
+  </body>
+</html>

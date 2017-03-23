@@ -1,0 +1,27 @@
+{%extends "base.html" %}
+{%load markup%}
+{%block title%}Latest News{%endblock%}
+{%block layoutblock%}
+<!-- News -->
+<section id="three" class="wrapper special style2">
+  <div class="inner">
+    <header>
+      <h2>News</h2>
+      <p>
+        Latest PgUS News
+      </p>
+    </header>
+    <div id="news">
+      {%for newsitem in news %}
+        <header>
+          <h3>{{newsitem.title}}</h3>
+        </header>
+        <p>
+          {{newsitem.summary|markdown}}
+        </p>
+        <hr>
+      {%endfor%}
+    </div>
+  </div>
+</section>
+{%endblock%}

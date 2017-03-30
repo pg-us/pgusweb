@@ -191,6 +191,18 @@
 		.container {
 			width: 90% !important;
 		}
+		
+		p {
+			text-align: left;
+			font-size: 14px;
+			letter-spacing: 0;
+		}
+		
+		ul li {
+			text-align: left;
+			font-size: 14px;
+			letter-spacing: 0;
+		}
 
 	}
 
@@ -2846,6 +2858,7 @@
 
 				#header a.navPanelToggle .fa {
 					font-size: 1.25em;
+					color: #fff;
 				}
 
 				@media screen and (max-width: 980px) {

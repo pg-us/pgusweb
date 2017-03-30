@@ -2885,7 +2885,7 @@
 	@media screen and (max-width: 480px) {
 
 		#header {
-			top: 1em;
+			top: 0;
 			min-width: 320px;
 		}
 
@@ -2996,8 +2996,8 @@
 	#banner {
 		padding: 10em 0 8em 0;
 		background-image: url('../../media/images/banner.jpg');
-		background-size: contain;
-		background-position: top;
+		background-size: cover;
+		background-position: center;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		text-align: center;

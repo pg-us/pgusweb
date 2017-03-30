@@ -1652,6 +1652,7 @@
 	a {
 		color: #5385c1;
 		text-decoration: underline;
+		font-weight: 600;
 	}
 
 		a:hover {
@@ -1669,6 +1670,11 @@
 
 	p {
 		margin: 0 0 2em 0;
+		letter-spacing: 0;
+	}
+
+	ul li {
+		letter-spacing:0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

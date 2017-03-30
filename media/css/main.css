@@ -1652,6 +1652,7 @@
 	a {
 		color: #5385c1;
 		text-decoration: underline;
+		font-weight: 600;
 	}
 
 		a:hover {

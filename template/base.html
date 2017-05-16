@@ -1,21 +1,18 @@
 <!DOCTYPE HTML>
-<!--
-    Theory by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-    Adaptation by Sarah Conway
--->
-<html>
-  <head>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
     <title>PgUS - {%block title%}{%endblock%}</title>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/media/css/main.css" />
-{%block extrahead%}{%endblock%}
+    <script src="/media/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    {%block extrahead%}{%endblock%}
   </head>
   <body>
     <!-- Banner -->
-    <section id="banner">
+    <section id="banner" class="jumbotron">
       <h1>United States PostgreSQL Association (PgUS)</h1>
     </section>
 
@@ -36,8 +33,9 @@
         <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
       </div>
     </header>
-
-    {%block layoutblock%}{%endblock%}
+    <div class="container">
+      {%block layoutblock%}{%endblock%}
+    </div>
 
     <!-- Footer -->
     <footer id="footer">

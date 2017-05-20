@@ -1014,6 +1014,10 @@
 		border-top: 1em solid #5385c1;
 	}
 
+	.jumbotron {
+		margin-bottom: 0;
+	}
+
 		#banner h1 {
 			font-size: 3em;
 			font-weight: 600;

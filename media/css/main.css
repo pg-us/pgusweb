@@ -118,7 +118,7 @@
 		appearance: none;
 		display: block;
 		float: left;
-		margin-right: -2em;
+		margin: 0;
 		opacity: 0;
 		width: 1em;
 		z-index: -1;

@@ -2,6 +2,10 @@
 @import url(font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+body, input, select, textarea {
+	font-family: 'Varela Round', sans-serif;
+}
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -810,7 +814,7 @@
 			position: relative;
 		}
 
-		#header .logo {
+		.navbar-brand h1 {
 			color: #fff;
 			display: inline-block;
 			font-weight: 600;
@@ -824,7 +828,7 @@
 			font-size: 1em;
 		}
 
-		#header a {
+		.navbar-brand a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
@@ -837,7 +841,7 @@
 			font-size: .8em;
 		}
 
-			#header a:hover {
+			.navbar-brand a:hover {
 				color: #2D2D2A;
 			}
 
@@ -1015,7 +1019,7 @@
 	}
 
 	.jumbotron {
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 	}
 
 		#banner h1 {

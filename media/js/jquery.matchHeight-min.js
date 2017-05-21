@@ -17,6 +17,6 @@ function isMobile() {
 
 if (!isMobile()) {
   $(function() {
-    $('.box').matchHeight();
+    $('.box.person').matchHeight();
   });
 }

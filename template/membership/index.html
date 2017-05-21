@@ -2,7 +2,7 @@
 {%block title%}Membership{%endblock%}
 {%block layoutblock%}
 <section id="three" class="wrapper">
-  <div class="inner">
+  <div class="container">
     <header class="align-center">
       <h2>your membership</h2>
     </header>
@@ -17,7 +17,7 @@
     <p>
       Online registration using this form is only available for the Professional membership.
       If you are interested in a Student membership, please contact
-      <a href="mailto:treasurer@postgresql.us">treasurer@postgresql.us</a>.
+      <a href="mailto:secretary@postgresql.us">secretary@postgresql.us</a>.
     </p>
     <p>
       Once you have registered, you will be able to generate an invoice for your
@@ -36,7 +36,7 @@
         <b style="color:red;">Note! This form contains errors and has not been saved!</b>
       </p>
       {% endif %}
-  
+
       <fieldset id="personal_information">
         <legend>
           <h3>Personal information ---</h3>
@@ -45,18 +45,18 @@
           {{ form.fullname.label_tag }}
           {{ form.fullname }} {% if form.fullname.errors %}{{ form.fullname.errors}}{% endif %}
         </div>
-  
+
         <div{% if form.country.errors %} class="errfld"{% endif %}>
           {{ form.country.label_tag }}
           {{ form.country }} {% if form.country.errors %}{{ form.country.errors}}{% endif %}
         </div>
-  
+
         <div{% if form.listed.errors %} class="errfld"{% endif %}>
           {{form.listed}} {{ form.listed.label_tag }} <br/>
           {% if form.listed.errors %}{{ form.listed.errors}}{% endif %}
         </div>
       </fieldset>
-  
+
       {%if registration_complete%}<br>
       <fieldset id="membership_status">
         <legend>
@@ -94,7 +94,7 @@
         {%endif%}{%comment%}member.expiressoon{%endcomment%}
       </fieldset>
       {%endif%}{%comment%}registration_complete{%endcomment%}
-  
+
       <input type="submit" name="submit" value="Save" />
       {%if member.expiressoon and not member.activeinvoice%}
         <input type="submit" name="submit" value="Generate invoice" />

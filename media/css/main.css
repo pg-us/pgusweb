@@ -1143,26 +1143,22 @@
 		z-index: 10001;
 	}
 
-		#header .inner {
-			margin: 0 auto;
-			position: relative;
-		}
+	.navbar {
+    border-radius: 0;
+    margin: 0;
+	}
 
-		.navbar-brand h1 {
-			color: #fff;
-			display: inline-block;
-			font-weight: 600;
-			height: inherit;
-			left: 0;
-			line-height: inherit;
-			margin: 0;
-			padding: 0;
-			position: absolute;
-			top: 0;
-			font-size: 1em;
-		}
+	.navbar-brand h1 {
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    height: inherit;
+    line-height: inherit;
+    position: absolute;
+    font-size: 1em;
+	}
 
-		.navbar-brand a {
+		.navbar-nav a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
 			-ms-transition: color 0.2s ease-in-out;
@@ -1170,31 +1166,14 @@
 			display: inline-block;
 			font-weight: 600;
 			padding: 0 0.75em;
-			color: inherit;
+			color: #fff;
 			text-decoration: none;
 			font-size: .8em;
 		}
 
-			.navbar-brand a:hover {
+			.navbar-nav a:hover {
 				color: #2D2D2A;
 			}
-
-			#header a:last-child {
-				padding-right: 0;
-			}
-
-			#header a.navPanelToggle {
-				display: none;
-				text-decoration: none;
-				height: 4em;
-				width: 4em;
-				z-index: 10003;
-			}
-
-				#header a.navPanelToggle .fa {
-					font-size: 1.25em;
-					color: #fff;
-				}
 
 				@media screen and (max-width: 980px) {
 

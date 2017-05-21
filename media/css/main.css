@@ -250,6 +250,12 @@
 
 /* Section/Article */
 
+	header p {
+		color: #bbb;
+		position: relative;
+		margin: 0 0 1.5em 0;
+	}
+
 	section.special, article.special {
 		text-align: center;
 	}
@@ -727,7 +733,9 @@
 		ul.icons {
 			cursor: default;
 			list-style: none;
-			padding-left: 0;
+			padding-top: 2em;
+			float: right;
+			display: inline-block;
 		}
 
 			ul.icons li {
@@ -1416,8 +1424,8 @@
 	#footer .copyright {
 		color: #bbb;
 		font-size: 0.8em;
-		margin: 0 0 2em 0;
-		padding: 0;
+		display: inline-block;
+		padding-top: 2em;
 	}
 
 		#footer .copyright a {

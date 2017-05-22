@@ -14,3 +14,8 @@ table td {
 input[type="submit"] {
     margin-bottom: 3em;
 }
+
+td.dlgClickable {
+  color: #337ab7;
+  text-decoration: underline;
+}

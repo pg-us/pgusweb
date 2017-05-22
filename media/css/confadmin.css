@@ -10,3 +10,7 @@ table td {
   font-size: 1.5em;
   margin: 1em 0;
 }
+
+input[type="submit"] {
+    margin-bottom: 3em;
+}

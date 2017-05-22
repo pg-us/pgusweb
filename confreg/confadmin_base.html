@@ -38,6 +38,11 @@
    </nav>
 
    <div class="container">
+{% if messages %}
+{% for message in messages %}
+<div class="alert{% if message.tags %} {{ message.tags|alertmap }}{%endif%}">{{ message }}</div>
+{% endfor %}
+{% endif %}
 
 	 {%block layoutblock%}{%endblock%}
    </div>

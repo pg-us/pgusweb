@@ -168,6 +168,22 @@
 		top: 0.5em;
 	}
 
+	legend h3 {
+    font-size: 1.15em;
+		text-transform: lowercase;
+		padding: 0;
+	}
+
+	legend {
+		font-size: 1.15em;
+		text-transform: lowercase;
+		padding: 1em 0;
+	}
+
+	div#membershipinfo, input, table td {
+    letter-spacing: initial;
+	}
+
 	sup {
 		font-size: 0.8em;
 		position: relative;
@@ -227,44 +243,12 @@
 		text-align: right;
 	}
 
-	.inner {
-		max-width: 80em;
-		margin: 0 auto;
-	}
-
-		@media screen and (max-width: 1280px) {
-
-			.inner {
-				max-width: 90%;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.inner {
-				max-width: 85%;
-			}
-
-		}
-
 /* Section/Article */
 
 	header p {
 		color: #bbb;
 		position: relative;
 		margin: 0 0 1.5em 0;
-	}
-
-	article:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -2em;
-    top: 0;
-    border-right: 1px solid #dbdbdb;
-    pointer-events: none;
 	}
 
 	section.special, article.special {
@@ -312,14 +296,6 @@
 			section.wrapper.style1 h3, article.wrapper.style1 h3 {
 				color: #FFF;
 			}
-
-		@media screen and (max-width: 980px) {
-
-			section.wrapper, article.wrapper {
-				padding: 2em 0;
-			}
-
-		}
 
 		@media screen and (max-width: 736px) {
 
@@ -1187,7 +1163,7 @@
 
 				@media screen and (max-width: 980px) {
 
-					p, ul.alt {
+					p, ul.alt, h3 {
 						text-align: left;
 					}
 
@@ -1222,6 +1198,18 @@
 						line-height: 44px;
 					}
 
+					.navbar-nav {
+				    background: #fff;
+				    top: 0;
+				    margin: 0;
+					}
+
+					.navbar-nav a {
+				    color: #000;
+				    display: block;
+				    border-bottom: 1px solid #eee;
+					}
+
 					button.navbar-toggle.collapsed {
 				    margin: .2em 1em;
 				    width: auto;
@@ -1240,6 +1228,10 @@
 				    float: left;
 				    margin: 1em 0;
 				    padding: 0;
+					}
+
+					section.wrapper, article.wrapper {
+						padding: 2em 0;
 					}
 				}
 

@@ -1256,16 +1256,52 @@
 		.pgContentWrap {
 		    width: 1170px;
 		}
+
+		#pgContentWrap {
+	    width: 1170px;
+	    margin: 0 auto;
+	    padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+		}
+
+		#pgContentWrap h1 {
+	    font-size: 2.75em;
+	    margin: 0 0 .5em 0;
+	    text-align: center;
+	    text-transform: lowercase;
+		}
+
+		#pgContentWrap h2, #pgContentWrap h3 {
+	    font-size: 1.35em;
+	    text-transform: lowercase;
+	    border-bottom: 1px solid #e5e5e5;
+	    margin: 0 0 1em 0;
+	    padding: 1em 0;
+		}
+
+		ul.breadcrumbs {
+	    display: inline-block;
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+		}
+
+		.breadcrumbs li {
+	    display: inline-block;
+	    padding-right: 1em;
+		}
 	}
 
 	@media (min-width: 992px) {
-		.pgContentWrap {
+		.pgContentWrap, #pgContentWrap {
 		    width: 970px;
 		}
 	}
 
 	@media (min-width: 768px) {
-		.pgContentWrap {
+		.pgContentWrap, #pgContentWrap {
 		    width: 750px;
 		}
 	}

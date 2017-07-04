@@ -1281,26 +1281,25 @@
 	    padding: 1em 0;
 		}
 
-		ul.breadcrumbs {
+		div#pgSideWrap ul {
 	    display: inline-block;
 	    margin: 0;
 	    padding: 0;
-	    list-style: none;
 		}
 
-		.breadcrumbs li {
+		div#pgSideWrap ul li {
 	    display: inline-block;
 	    padding-right: 1em;
 		}
 	}
 
-	@media (min-width: 992px) {
+	@media (max-width: 992px) {
 		.pgContentWrap, #pgContentWrap {
 		    width: 970px;
 		}
 	}
 
-	@media (min-width: 768px) {
+	@media (max-width: 768px) {
 		.pgContentWrap, #pgContentWrap {
 		    width: 750px;
 		}

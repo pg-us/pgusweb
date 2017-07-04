@@ -1290,6 +1290,8 @@
 		div#pgSideWrap ul li {
 	    display: inline-block;
 	    padding-right: 1em;
+	    padding-top: 1em;
+	    padding-left: 0;
 		}
 	}
 

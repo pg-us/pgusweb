@@ -1318,7 +1318,7 @@
 
 	#banner {
 		padding: 10em 0 8em 0;
-		background-image: url('../../media/images/banner.jpg');
+		background-image: url('../../pgus_media/images/banner.jpg');
 		background-size: cover;
 		background-position: center;
 		background-attachment: scroll;
@@ -1351,7 +1351,7 @@
 		}
 
 		.one {
-			background-image: url('../../media/images/banner1.jpg') !important;
+			background-image: url('../../pgus_media/images/banner1.jpg') !important;
 		}
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {

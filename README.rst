@@ -1,6 +1,8 @@
 The United States PostgreSQL Association website
 ================================================
 
+These are the PgUS templates which override the PgEU templates.
+
 License
 -------
 

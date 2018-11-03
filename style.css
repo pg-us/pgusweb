@@ -1,0 +1,37 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+.head{
+	font-size:1.1em;
+	color:blue;
+
+}
+.big{
+	color:blue;
+	margin-left:10%;
+}
+.onez{
+	border:none;
+	border-bottom:2px solid grey;
+	outline:none;
+	font-size:2em;
+	transition:0.5s;
+}
+.onez:focus{
+	border-bottom-color:blue;
+	transition:0.5s;
+	padding:20px;
+}
+form{
+	margin-left:10%;
+}
+.descr{
+	margin-left:10%;
+}
+.link{
+	background:blue;
+	color:white;
+	padding:20px;
+	font-size:1.5em;
+	text-decoration:none;
+}

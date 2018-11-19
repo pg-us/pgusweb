@@ -7,18 +7,20 @@
     <header class="align-center">
       <h2>upcoming events</h2>
     </header>
-    {%for event in events %}
-    <header>
-      <h3><a href="/events/{{event.id}}">{{event.title}}</a></h3>
-    </header>
-    <b>Location: {{event.full_location}}</b>
-    <br>
-    <b>Date: {{event.pretty_date}}</b>
-    <p>
-      {{event.summary|markdown}}
-    </p>
+    {%for event in events%}
+	      <h3>{{event.conferencename}}</h3>
+	      <h4>{{event.conferencedatestr}}</h4>
+	      <h5>{{event.location}}</h5>
+        {%if event.active%}
+        	    <a href="/events/{{event.urlname}}/register/">Open for registration</a>
+        {%endif%}
+        {%if event.callforpapersopen%}
+        	    <a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>
+        {%endif%}
+        {%if event.callforsponsorsopen%}
+        	    <a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>
+        {%endif%}
     {%endfor%}
   </div>
 </section>
 {%endblock%}
-

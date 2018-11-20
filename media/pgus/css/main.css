@@ -186,12 +186,6 @@
 
 /* Section/Article */
 
-	header p {
-		color: #bbb;
-		position: relative;
-		margin: 0 0 1.5em 0;
-	}
-
 	section.special, article.special {
 		text-align: center;
 	}
@@ -201,19 +195,11 @@
 		}
 
 	section.wrapper, article.wrapper {
-		padding: 6em 0;
+		padding: 3em 0;
 	}
 
 		section.wrapper header, article.wrapper header {
 			margin-bottom: 2em;
-		}
-
-			section.wrapper header p, article.wrapper header p {
-				font-size: 1em;
-			}
-
-		section.wrapper article header, article.wrapper article header {
-			margin: 0;
 		}
 
 		section.wrapper.style1, article.wrapper.style1 {
@@ -221,16 +207,13 @@
 			color: #bacee6;
 		}
 
-			section.wrapper.style1 header h2, article.wrapper.style1 header h2 {
+			section.wrapper.style1 header h2, article.wrapper.style1 header h2,
+			section.wrapper.style1 h3, article.wrapper.style1 h3 {
 				color: #fff;
 			}
 
 			section.wrapper.style1 header p, article.wrapper.style1 header p {
 				color: #bacee6;
-			}
-
-			section.wrapper.style1 h3, article.wrapper.style1 h3 {
-				color: #FFF;
 			}
 
 		@media screen and (max-width: 736px) {

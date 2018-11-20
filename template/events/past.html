@@ -1,19 +1,15 @@
-{%extends "nav_events.html"%}
+{%extends "base_pgus.html"%}
+{%load markup%}
 {%block title%}Past Events{%endblock%}
-{%block fullcontent%}
-<div class="col-md-7 contentwrap">
-<h1>Past Events</h1>
-{%include "events/compacteventlist.inc" with events=past splityears=1%}
-</div>
+{%block layoutblock%}
 
-<div class="col-md-3" id="rightbar">
-    <h3>Upcoming events</h3>
-{%include "events/compacteventlist.inc"%}
-    <h3>Our Event series</h3>
-    <ul>
-{%for s in series%}
-<li><a href="/events/series/{{s.name|slugify}}-{{s.id}}/">{{s.name}}</a></li>
-{%endfor%}
-    </ul>
-</div>
+<section id="three" class="wrapper">
+  <div class="container">
+    <header class="align-center">
+      <h2>past events</h2>
+    </header>
+    {%include "events/compacteventlist.inc" with events=past splityears=1%}
+  </div>
+</section>
+
 {%endblock%}

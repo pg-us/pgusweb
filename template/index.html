@@ -38,7 +38,7 @@
         </header>
         <ul>
         {%for event in events %}
-          <li>{{event.conferencename}}</li>
+          <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
         {%endfor%}
         </ul>
         <footer>

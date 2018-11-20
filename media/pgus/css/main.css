@@ -96,6 +96,10 @@
 			text-decoration: none;
 		}
 
+	a.btn.btn-primary.btn-sm {
+    text-decoration: none !important;
+	}
+
 	strong, b {
 		color: #555;
 		font-weight: 600;
@@ -135,17 +139,17 @@
 		font-size: 1.35em;
 	}
 
-	h3.top1 {
+	h2.top1, h3.top1 {
 		border-top: 10px solid #FE7F2D;
 		padding: 1em 0 0 0;
 	}
 
-	h3.top2 {
+	h2.top2, h3.top2 {
 		border-top: 10px solid #5385c1;
 		padding: 1em 0 0 0;
 	}
 
-	h3.top3 {
+	h2.top4, h3.top3 {
 		border-top: 10px solid #4C9F70;
 		padding: 1em 0 0 0;
 	}

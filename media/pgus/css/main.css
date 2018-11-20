@@ -130,6 +130,10 @@
 			text-decoration: none;
 		}
 
+	h1 {
+		font-size: 2.5em;
+	}
+
 	h2 {
 		font-size: 1.75em;
 		font-weight: 100;
@@ -166,65 +170,9 @@
 		font-size: 0.7em;
 	}
 
-	sub {
-		font-size: 0.8em;
-		position: relative;
-		top: 0.5em;
-	}
-
-	legend h3 {
-    font-size: 1.15em;
-		text-transform: lowercase;
-		padding: 0;
-		margin: 0;
-	}
-
-	legend {
-		font-size: 1.15em;
-		text-transform: lowercase;
-		padding: 1em 0;
-	}
-
 	div#membershipinfo, input, table td {
     letter-spacing: initial;
 	}
-
-	sup {
-		font-size: 0.8em;
-		position: relative;
-		top: -0.5em;
-	}
-
-	blockquote {
-		border-left: solid 4px #dbdbdb;
-		font-style: italic;
-		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 2em;
-	}
-
-	code {
-		background: rgba(144, 144, 144, 0.075);
-		border-radius: 0;
-		border: solid 1px #dbdbdb;
-		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
-	}
-
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0 2em 0;
-	}
-
-		pre code {
-			display: block;
-			line-height: 1.75;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
 
 	hr {
 		border: 0;
@@ -235,18 +183,6 @@
 		hr.major {
 			margin: 3em 0;
 		}
-
-	.align-left {
-		text-align: left;
-	}
-
-	.align-center {
-		text-align: center;
-	}
-
-	.align-right {
-		text-align: right;
-	}
 
 /* Section/Article */
 
@@ -271,11 +207,6 @@
 		section.wrapper header, article.wrapper header {
 			margin-bottom: 2em;
 		}
-
-			section.wrapper header h2, article.wrapper header h2 {
-				font-size: 2.75em;
-				margin: 0 0 .5em 0;
-			}
 
 			section.wrapper header p, article.wrapper header p {
 				font-size: 1em;
@@ -1351,7 +1282,7 @@
 	}
 
 		#banner h1 {
-		    font-size: 3em;
+		    font-size: 2.5em;
 		    font-weight: 600;
 		    color: #fff;
 		}
@@ -1391,16 +1322,8 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 8em 1.5em 6em 1.5em;
+				padding: 5em 1.5em;
 			}
-
-				#banner h1 {
-					font-size: 2.5em;
-				}
-
-				#banner p {
-					font-size: .9em;
-				}
 
 		}
 

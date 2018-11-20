@@ -111,7 +111,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin-bottom: 1.4em;
 		letter-spacing: 0;
 	}
 
@@ -622,8 +622,7 @@
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
+		margin-bottom: 1.4em;
 		padding-left: 1em;
 	}
 

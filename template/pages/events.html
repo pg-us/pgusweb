@@ -2,25 +2,36 @@
 {%load markup%}
 {%block title%}Upcoming Events{%endblock%}
 {%block layoutblock%}
+
 <section id="three" class="wrapper">
   <div class="container">
     <header class="align-center">
       <h2>upcoming events</h2>
     </header>
-    {%for event in events%}
-	      <h3>{{event.conferencename}}</h3>
-	      <h4>{{event.conferencedatestr}}</h4>
-	      <h5>{{event.location}}</h5>
-        {%if event.active%}
-        	    <a href="/events/{{event.urlname}}/register/">Open for registration</a>
-        {%endif%}
-        {%if event.callforpapersopen%}
-        	    <a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>
-        {%endif%}
-        {%if event.callforsponsorsopen%}
-        	    <a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>
-        {%endif%}
-    {%endfor%}
+
+    <p>
+      The following events are currently planned to be held in the
+      near future.
+    </p>
+    {%if regopen%}
+      <h3>open for registration</h3>
+      {%include "events/wideeventlist.inc" with events=regopen what="reg"%}
+    {%endif%}
+
+    {%if cfpopen%}
+      <h3>open call for papers</h3>
+      {%include "events/wideeventlist.inc" with events=cfpopen what="cfp"%}
+    {%endif%}
+
+    {%if cfsopen%}
+      <h3>open call for sponsors</h3>
+      {%include "events/wideeventlist.inc" with events=cfsopen what="cfs"%}
+    {%endif%}
+
+    <h2>Past events</h2>
+    {%include "events/compacteventlist.inc" with events=past%}
+    <a href="past/">More past events</a>
   </div>
 </section>
+
 {%endblock%}

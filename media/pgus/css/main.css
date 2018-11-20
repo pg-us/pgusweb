@@ -142,17 +142,17 @@
 
 	h2.top1, h3.top1 {
 		border-top: 10px solid #FE7F2D;
-		padding: 1em 0 0 0;
+		padding: 0.5em 0;
 	}
 
 	h2.top2, h3.top2 {
 		border-top: 10px solid #5385c1;
-		padding: 1em 0 0 0;
+		padding: 0.5em 0;
 	}
 
 	h2.top3, h3.top3 {
 		border-top: 10px solid #4C9F70;
-		padding: 1em 0 0 0;
+		padding: 0.5em 0;
 	}
 
 	h4 {

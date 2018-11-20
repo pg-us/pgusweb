@@ -116,14 +116,13 @@
 	}
 
 	ul li {
-		letter-spacing:0;
+		letter-spacing: 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #5385c1;
 		font-weight: 300;
-		line-height: 1.5;
-		margin: 0 0 1em 0;
+		margin: 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -142,17 +141,17 @@
 
 	h2.top1, h3.top1 {
 		border-top: 10px solid #FE7F2D;
-		padding: 0.5em 0;
+		padding: 0.8em 0;
 	}
 
 	h2.top2, h3.top2 {
 		border-top: 10px solid #5385c1;
-		padding: 0.5em 0;
+		padding: 0.8em 0;
 	}
 
 	h2.top3, h3.top3 {
 		border-top: 10px solid #4C9F70;
-		padding: 0.5em 0;
+		padding: 0.8em 0;
 	}
 
 	h4 {

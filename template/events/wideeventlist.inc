@@ -1,7 +1,7 @@
 {%load markup%}
 <dl class="eventlist">
 {%for event in events%}
-<dt><h5>{%if event.confurl%}<a href="{{event.confurl}}">{{event.conferencename}}</a>{%else%}{{event.conferencename}}{%endif%}</h5></dt>
+<dt><h4>{%if event.confurl%}<a href="{{event.confurl}}">{{event.conferencename}}</a>{%else%}{{event.conferencename}}{%endif%}</h4></dt>
 <dd>
 <p>
   <span class="nobr"><i class="fa fa-calendar-o"></i> {{event.conferencedatestr}}</span>

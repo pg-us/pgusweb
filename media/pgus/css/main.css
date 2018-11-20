@@ -98,6 +98,7 @@
 
 	a.btn.btn-primary.btn-sm {
     text-decoration: none !important;
+		font-size: 1.5rem;
 	}
 
 	strong, b {
@@ -1479,4 +1480,9 @@
 			text-align: center;
 		}
 
+	}
+
+	dl.eventlist > dd > p {
+	    margin: 1rem 0 !important;
+	    font-size: 1.7rem;
 	}

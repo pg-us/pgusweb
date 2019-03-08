@@ -96,6 +96,11 @@
 			text-decoration: none;
 		}
 
+	a.btn.btn-primary.btn-sm {
+    text-decoration: none !important;
+		font-size: 1.5rem;
+	}
+
 	strong, b {
 		color: #555;
 		font-weight: 600;
@@ -106,19 +111,18 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin-bottom: 1.4em;
 		letter-spacing: 0;
 	}
 
 	ul li {
-		letter-spacing:0;
+		letter-spacing: 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #5385c1;
 		font-weight: 300;
-		line-height: 1.5;
-		margin: 0 0 1em 0;
+		margin: 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -126,8 +130,12 @@
 			text-decoration: none;
 		}
 
+	h1 {
+		font-size: 2em;
+	}
+
 	h2 {
-		font-size: 1.75em;
+		font-size: 1.7em;
 		font-weight: 100;
 	}
 
@@ -135,19 +143,19 @@
 		font-size: 1.35em;
 	}
 
-	h3.top1 {
+	h2.top1, h3.top1 {
 		border-top: 10px solid #FE7F2D;
-		padding: 1em 0 0 0;
+		padding: 0.8em 0;
 	}
 
-	h3.top2 {
+	h2.top2, h3.top2 {
 		border-top: 10px solid #5385c1;
-		padding: 1em 0 0 0;
+		padding: 0.8em 0;
 	}
 
-	h3.top3 {
+	h2.top3, h3.top3 {
 		border-top: 10px solid #4C9F70;
-		padding: 1em 0 0 0;
+		padding: 0.8em 0;
 	}
 
 	h4 {
@@ -162,65 +170,9 @@
 		font-size: 0.7em;
 	}
 
-	sub {
-		font-size: 0.8em;
-		position: relative;
-		top: 0.5em;
-	}
-
-	legend h3 {
-    font-size: 1.15em;
-		text-transform: lowercase;
-		padding: 0;
-		margin: 0;
-	}
-
-	legend {
-		font-size: 1.15em;
-		text-transform: lowercase;
-		padding: 1em 0;
-	}
-
 	div#membershipinfo, input, table td {
     letter-spacing: initial;
 	}
-
-	sup {
-		font-size: 0.8em;
-		position: relative;
-		top: -0.5em;
-	}
-
-	blockquote {
-		border-left: solid 4px #dbdbdb;
-		font-style: italic;
-		margin: 0 0 2em 0;
-		padding: 0.5em 0 0.5em 2em;
-	}
-
-	code {
-		background: rgba(144, 144, 144, 0.075);
-		border-radius: 0;
-		border: solid 1px #dbdbdb;
-		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
-	}
-
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0 2em 0;
-	}
-
-		pre code {
-			display: block;
-			line-height: 1.75;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
 
 	hr {
 		border: 0;
@@ -232,25 +184,7 @@
 			margin: 3em 0;
 		}
 
-	.align-left {
-		text-align: left;
-	}
-
-	.align-center {
-		text-align: center;
-	}
-
-	.align-right {
-		text-align: right;
-	}
-
 /* Section/Article */
-
-	header p {
-		color: #bbb;
-		position: relative;
-		margin: 0 0 1.5em 0;
-	}
 
 	section.special, article.special {
 		text-align: center;
@@ -261,24 +195,11 @@
 		}
 
 	section.wrapper, article.wrapper {
-		padding: 6em 0;
+		padding: 3em 0;
 	}
 
 		section.wrapper header, article.wrapper header {
 			margin-bottom: 2em;
-		}
-
-			section.wrapper header h2, article.wrapper header h2 {
-				font-size: 2.75em;
-				margin: 0 0 .5em 0;
-			}
-
-			section.wrapper header p, article.wrapper header p {
-				font-size: 1em;
-			}
-
-		section.wrapper article header, article.wrapper article header {
-			margin: 0;
 		}
 
 		section.wrapper.style1, article.wrapper.style1 {
@@ -286,16 +207,13 @@
 			color: #bacee6;
 		}
 
-			section.wrapper.style1 header h2, article.wrapper.style1 header h2 {
+			section.wrapper.style1 header h2, article.wrapper.style1 header h2,
+			section.wrapper.style1 h3, article.wrapper.style1 h3 {
 				color: #fff;
 			}
 
 			section.wrapper.style1 header p, article.wrapper.style1 header p {
 				color: #bacee6;
-			}
-
-			section.wrapper.style1 h3, article.wrapper.style1 h3 {
-				color: #FFF;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -704,8 +622,7 @@
 		}
 
 	ul {
-		list-style: disc;
-		margin: 0 0 2em 0;
+		margin-bottom: 1.4em;
 		padding-left: 1em;
 	}
 
@@ -1140,14 +1057,17 @@
     margin: 0;
 	}
 
+	.navbar-brand {
+	    height: auto;
+	    padding: 0;
+	    line-height: inherit;
+	}
+
 	.navbar-brand h1 {
-    color: #fff;
-    display: inline-block;
-    font-weight: 600;
-    height: inherit;
-    line-height: inherit;
-    position: absolute;
-    font-size: 1em;
+	    color: #fff;
+	    display: inline-block;
+	    font-weight: 600;
+	    font-size: 1em;
 	}
 
 		.navbar-nav a {
@@ -1216,10 +1136,6 @@
 				    margin: .2em 1em;
 				    width: auto;
 				    padding: 0;
-					}
-
-					.navbar-brand h1 {
-				    margin: .8em;
 					}
 
 					.navbar {
@@ -1333,7 +1249,7 @@
 /* Banner */
 
 	#banner {
-		padding: 10em 0 8em 0;
+		padding: 5em 0;
 		background-image: url('../../../media/pgus/images/banner.jpg');
 		background-size: cover;
 		background-position: center;
@@ -1348,18 +1264,9 @@
 	}
 
 		#banner h1 {
-			font-size: 3em;
-			font-weight: 600;
-			color: #fff;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
-			padding: 0;
-		}
-
-		#banner p {
-			font-size: 1em;
-			color: rgba(255, 255, 255, 0.55);
-			margin-bottom: 1.75em;
+		    font-size: 2.5em;
+		    font-weight: 600;
+		    color: #fff;
 		}
 
 		#news {
@@ -1397,16 +1304,8 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 8em 1.5em 6em 1.5em;
+				padding: 5em 1.5em;
 			}
-
-				#banner h1 {
-					font-size: 2.5em;
-				}
-
-				#banner p {
-					font-size: .9em;
-				}
 
 		}
 
@@ -1475,4 +1374,9 @@
 			text-align: center;
 		}
 
+	}
+
+	dl.eventlist > dd > p {
+	    margin: 1rem 0 !important;
+	    font-size: 1.7rem;
 	}

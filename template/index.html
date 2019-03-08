@@ -38,7 +38,7 @@
         </header>
         <ul>
         {%for event in events %}
-          <li><a href="/events/{{event.id}}">{{event.title}}</a></li>
+          <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
         {%endfor%}
         </ul>
         <footer>
@@ -52,7 +52,7 @@
 <!-- News -->
 <section id="three" class="wrapper special style3">
   <div class="container">
-    <header class="align-center">
+    <header class="text-center">
       <h2>News</h2>
       <p>
         Latest PgUS News

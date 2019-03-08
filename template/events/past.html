@@ -1,0 +1,15 @@
+{%extends "base_pgus.html"%}
+{%load markup%}
+{%block title%}Past Events{%endblock%}
+{%block layoutblock%}
+
+<section id="three" class="wrapper">
+  <div class="container">
+    <header>
+      <h2>past events</h2>
+    </header>
+    {%include "events/compacteventlist.inc" with events=past splityears=1%}
+  </div>
+</section>
+
+{%endblock%}

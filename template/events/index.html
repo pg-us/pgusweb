@@ -1,0 +1,41 @@
+{%extends "base_pgus.html"%}
+{%load markup%}
+{%block title%}Upcoming Events{%endblock%}
+{%block layoutblock%}
+
+<section id="three" class="wrapper">
+  <div class="container">
+    <header class="text-center">
+      <h2>upcoming events</h2>
+    </header>
+
+    <p>
+      The following events are currently planned to be held in the
+      near future.
+    </p>
+
+    <h2 class="top1">all events</h2>
+    {%include "events/compacteventlist.inc"%}
+
+    {%if regopen%}
+      <h2 class="top2">open for registration</h3>
+      {%include "events/wideeventlist.inc" with events=regopen what="reg"%}
+    {%endif%}
+
+    {%if cfpopen%}
+      <h2 class="top3">open call for papers</h3>
+      {%include "events/wideeventlist.inc" with events=cfpopen what="cfp"%}
+    {%endif%}
+
+    {%if cfsopen%}
+      <h2 class="top1">open call for sponsors</h3>
+      {%include "events/wideeventlist.inc" with events=cfsopen what="cfs"%}
+    {%endif%}
+
+    <h2 class="top2">past events</h2>
+    {%include "events/compacteventlist.inc" with events=past%}
+    <a href="past/">More past events</a>
+  </div>
+</section>
+
+{%endblock%}

@@ -12,6 +12,7 @@ MEMBERSHIP_SENDER_EMAIL="treasurer@postgresql.us"
 
 # Organization name
 ORG_NAME="PostgreSQL US"
+ORG_SHORTNAME="PgUS"
 
 # Treasurer email address
 TREASURER_EMAIL="treasurer@postgresql.us"

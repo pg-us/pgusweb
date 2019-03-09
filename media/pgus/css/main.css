@@ -859,6 +859,7 @@
 	input[type="reset"],
 	input[type="button"],
 	button,
+	a.btn,
 	.button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -888,6 +889,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
+		a.btn,
 		.button:hover {
 			background-color: #FE7F2D;
 		}
@@ -896,6 +898,7 @@
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		button:active,
+		a.btn,
 		.button:active {
 			background-color: #FE7F2D;
 		}
@@ -904,6 +907,7 @@
 		input[type="reset"].icon,
 		input[type="button"].icon,
 		button.icon,
+		a.btn,
 		.button.icon {
 			padding-left: 1.35em;
 		}

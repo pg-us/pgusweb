@@ -1384,3 +1384,9 @@
 	    margin: 1rem 0 !important;
 	    font-size: 1.7rem;
 	}
+
+/* pgeusignupform CSS */
+
+div.pgeusignupform table th {
+    white-space: nowrap;
+}

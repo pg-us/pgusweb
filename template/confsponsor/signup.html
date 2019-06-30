@@ -1,0 +1,100 @@
+{%extends "nav_events.html" %}
+{%load alertmap%}
+{%load markup%}
+{%block title%}Conference Sponsorship Signup - {{conference}}{%endblock%}
+{%block content%}
+<div class="pgeuconferencesponsorship">
+  <h1>{{conference}}</h1>
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert{% if message.tags %} {{ message.tags|alertmap }}{%endif%}">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+
+  <h2>Conference Sponsorship Signup</h2>
+  <p>
+  On this page you can sign up as a sponsor of {{conference}}. If you have any questions
+  or comments at all, please <a href="mailto:{{conference.sponsoraddr}}">contact</a> the
+  organizers <strong>before</strong> you begin!
+  </p>
+
+  {%if current%}
+  <h1>Existing signups</h1>
+  <p>
+  We have noticed that you are <strong>already</strong> signed up as managing a sponsorship for
+  this conference. You can of course manage more than one sponsorship (for example for two different
+  companies), but please doublecheck on this list. If you already have a signed up sponsorship,
+  please continue to work on that one rather than creating a new one! And as always, if you have
+  any questions, please don't hesitate to contact
+  <a href="mailto:{{conference.sponsoraddr}}">the organizers</a>.
+  </p>
+  <p>
+  Your existing sponsorships are:
+  </p>
+  <ul>
+  {%for s in current%}
+  <li><a href="/events/sponsor/{{s.id}}/">{{s}} ({{s.level}})</a></li>
+  {%endfor%}
+  </ul>
+  {%endif%}
+  <p></p>
+
+  <h1>Available sponsorships</h1>
+  <p>
+  The following sponsorship levels are available for this conference:
+  </p>
+  {%for level in levels%}
+  <h2>{{level}}</h2>
+  <p>
+  The following benefits are available at this level (click for details):
+  </p>
+  <div id="levelset_{{level.id}}">
+  {%for b in level.sponsorshipbenefit_set.all %}
+   <div class="card">
+     <div class="card-header p-0" id="levelset_h_{{b.id}}">
+       <h5 class="m-0">
+         <button class="btn btn-link" data-toggle="collapse" data-target="#levelset_b_{{b.id}}" aria-expanded="false" aria-controls="levelset_b_{{b.id}}">{{b}}</a>
+         <i class="fa fa-caret-square-o-down"></i>
+       </h5>
+     </div>
+     <div id="levelset_b_{{b.id}}" class="collapse" aria-labelledby="levelset_h_{{b.id}}" data-parent="levelset_{{level.id}}">
+       <div class="card-body">
+         {{b.benefitdescription|markdown}}
+       </div>
+     </div>
+   </div>
+  {%endfor%}
+  </div>
+  <p>
+  The price for this sponsorship level is {{currency_symbol}}{{level.levelcost}}.
+  </p>
+  {%if level.maxnumber%}
+  <p>
+    This level allows a maximum of {{level.maxnumber}} sponsors. There are currently
+    {{level.num_confirmed}} confirmed and {{level.num_unconfirmed}} unconfirmed
+    sponsors signed up at this level.
+  {%if level.maxnumber <= level.num_total and level.num_unconfirmed > 0 %}
+  At this point, you can sign up on the wait list for this level, and will be granted
+  a slot if not all other sponsors complete their signup.
+  {%endif%}
+  </p>
+  {%endif%}
+  {%if level.contract%}
+  <p>
+  A full specification of all the levels can be found in the
+  <a href="/events/sponsor/viewcontract/{{level.contract.id}}/">contract</a>.
+  If there is a difference, the version listed in the contract takes precedence.
+  </p>
+  {%endif%}
+  {%if level.can_signup %}
+  <p><a class="btn btn-primary" href="{{level.urlname}}/">Sign Up</a></p>
+  {%else%}
+  <p><i>This level is not currently available for signup.</i></p>
+  {%endif%}
+
+  <hr/>
+  {%endfor%}
+
+  <a href="/events/sponsor/" class="btn btn-outline-dark">Back to sponsor event list</a>
+  {%endblock%}
+</div>

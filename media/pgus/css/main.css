@@ -2,6 +2,16 @@
 @import url(font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+/* pgeusignupform CSS */
+
+div.pgeusignupform table th {
+    white-space: nowrap;
+}
+
+div.pgeusignupform input {
+    margin-bottom: 0rem;
+}
+
 /* Basic */
 
 	@-ms-viewport {
@@ -1384,9 +1394,3 @@
 	    margin: 1rem 0 !important;
 	    font-size: 1.7rem;
 	}
-
-/* pgeusignupform CSS */
-
-div.pgeusignupform table th {
-    white-space: nowrap;
-}

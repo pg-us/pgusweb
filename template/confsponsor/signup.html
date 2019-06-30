@@ -19,7 +19,7 @@
   </p>
 
   {%if current%}
-  <h1>Existing signups</h1>
+  <h2>Existing signups</h2>
   <p>
   We have noticed that you are <strong>already</strong> signed up as managing a sponsorship for
   this conference. You can of course manage more than one sponsorship (for example for two different
@@ -39,12 +39,12 @@
   {%endif%}
   <p></p>
 
-  <h1>Available sponsorships</h1>
+  <h2>Available sponsorships</h2>
   <p>
   The following sponsorship levels are available for this conference:
   </p>
   {%for level in levels%}
-  <h2>{{level}}</h2>
+  <h3>{{level}}</h3>
   <p>
   The following benefits are available at this level (click for details):
   </p>
@@ -53,8 +53,7 @@
    <div class="card">
      <div class="card-header p-0" id="levelset_h_{{b.id}}">
        <h5 class="m-0">
-         <button class="btn btn-link" data-toggle="collapse" data-target="#levelset_b_{{b.id}}" aria-expanded="false" aria-controls="levelset_b_{{b.id}}">{{b}}</a>
-         <i class="fa fa-caret-square-o-down"></i>
+         <button class="btn btn-primary" data-toggle="collapse" data-target="#levelset_b_{{b.id}}" aria-expanded="false" aria-controls="levelset_b_{{b.id}}">{{b}}</a>
        </h5>
      </div>
      <div id="levelset_b_{{b.id}}" class="collapse" aria-labelledby="levelset_h_{{b.id}}" data-parent="levelset_{{level.id}}">
@@ -95,6 +94,6 @@
   <hr/>
   {%endfor%}
 
-  <a href="/events/sponsor/" class="btn btn-outline-dark">Back to sponsor event list</a>
+  <a href="/events/sponsor/" class="btn btn-primary">Back to sponsor event list</a>
   {%endblock%}
 </div>

@@ -1,0 +1,103 @@
+{%extends "nav_events.html" %}
+{%block title%}Conference Sponsorship Signup - {{conference}}{%endblock%}
+{%block extrahead%}
+<style>
+tr.error {
+   background-color: #ffb6b6;
+}
+div#addresspreview {
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 3px;
+   margin-bottom: 2em;
+}
+</style>
+{%endblock%}
+{%block content%}
+<div class="pgeusignupform">
+  <h1>Conference Sponsorship Signup - {{conference}}</h1>
+  <p>
+  Thank you for your interest in sponsoring {{conference}}! Please fill out the
+  form below to initiate your sponsorship!
+  </p>
+
+  {%if level.contract%}
+  <p>
+  Before you complete the signup form, please <em>make sure</em> you have read the
+  <a href="/events/sponsor/viewcontract/{{level.contract.id}}/">contract</a>, and
+  agree with the contents in it.
+  </p>
+  {%endif%}
+
+  {%if form.errors%}
+  <p>
+  <b>NOTE!</b> Your submitted form contained errors and has <b>not</b> been saved!
+  </p>
+  {%endif%}
+
+  <form method="post" action=".">{% csrf_token %}
+  <div id="fullform" {%if previewaddr%}style="display:none;"{%endif%}>
+  <table>
+   <tr><th>Level</th><td>{{level}}</td><td></td></tr>
+   <tr><th>Contact name *</th><td>{{user_name}}</td></tr>
+  {%for field in form%}
+   <tr {%if field.errors%}class="error"{%endif%}>
+    <th>{{field.label}}</th>
+    <td>{{field}}{%if field.help_text%}<br/>{{field.help_text}}{%endif%}</td>
+    <td>{%if field.errors%}{{field.errors}}{%endif%}</td>
+   </tr>
+  {%endfor%}
+  </table>
+  <p>
+  Please double-check all the fields with an asterisk in the form above, as they
+  are what will be included on the invoice when it's generated. Once generated,
+  the invoice cannot be changed.
+  </p>
+  </div>
+  {%if previewaddr%}
+  <h4>Invoice address preview</h4>
+  <p>
+    Please verify that the address below is correct. Please note that it will
+    <strong>not</strong> be possible to modify the invoice once
+    generated, so make sure you verify the contents of the address
+    against any requirements of your organisation.
+  </p>
+  <div id="addresspreview">
+  {{previewaddr|linebreaks}}
+  </div>
+  <input type="hidden" name="confirm" value="1">
+  {%endif%}
+
+  {%if not level.instantbuy%}
+  <p>
+  Please note that due to the level of this sponsorship contract, we will require a
+  signed and scanned copy of the
+  <a href="/events/sponsor/viewcontract/{{level.contract.id}}/">contract</a>, apart
+  from the confirmation above. Please complete this form, and you will receive further
+  instructions.
+  </p>
+  {%endif%}
+
+  {%if level.maxnumber%}
+  <p>
+    This level allows a maximum of {{level.maxnumber}} sponsors. There are currently
+    {{level.num_confirmed}} confirmed and {{level.num_unconfirmed}} unconfirmed
+    sponsors signed up at this level.
+  {%if level.maxnumber <= level.num_total and level.num_unconfirmed > 0 %}
+  At this point, you can sign up on the wait list for this level, and will be granted
+  a slot if not all other sponsors complete their signup.
+  {%endif%}
+  </p>
+  {%endif%}
+
+  <input type="submit" value="Sign up!" class="btn btn-primary">
+  {%if previewaddr%}
+  <input type="submit" name="submit" value="Continue editing" class="btn">
+  {%endif%}
+  </form>
+
+  <br/>
+
+  <a href="../" class="btn btn-outline-dark">Back to level list</a>
+</div>
+{%endblock%}

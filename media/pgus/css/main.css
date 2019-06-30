@@ -4,12 +4,20 @@
 
 /* pgeusignupform CSS */
 
+div.pgeusignupform tr.error {
+    background-color: #ffb6b6 !important;
+}
+
 div.pgeusignupform table th {
     white-space: nowrap;
 }
 
 div.pgeusignupform input {
     margin-bottom: 0rem;
+}
+
+h4 {
+		margin-bottom: 2rem;
 }
 
 /* Basic */

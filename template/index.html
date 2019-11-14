@@ -65,26 +65,20 @@
             <h3>{{news.0.title}}</h3>
           </header>
           <p>
-            {{news.0.summary|markdown|truncatewords:50}}
+            {{news.0.summary|markdown}}
           </p>
-          <footer>
-            <a href="/news" class="button special">More</a>
-          </footer>
         </article>
       </div>
       <div class="col-md-6">
         <article>
           <header>
             <h3>recent news posts</h3>
+          </header>
             <ul class="alt">
             {%for newsitem in news %}
-              <li>{{newsitem.title}}</li>
+              <li>{{newsitem.summary|markdown}}</li>
             {%endfor%}
             </ul>
-          </header>
-          <footer>
-            <a href="/news" class="button special">More</a>
-          </footer>
         </article>
       </div>
     </div>

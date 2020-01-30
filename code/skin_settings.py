@@ -1,3 +1,4 @@
+DEFAULT_EMAIL = "webmaster@postgresql.us"
 SERVER_EMAIL="webmaster@postgresql.us"
 
 # Local time zone for this installation. Choices can be found here:

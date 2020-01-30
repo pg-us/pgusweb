@@ -8,7 +8,7 @@ SERVER_EMAIL="webmaster@postgresql.us"
 TIME_ZONE = 'US/Central'
 
 INVOICE_SENDER_EMAIL="treasurer@postgresql.us"
-MEMBERSHIP_SENDER_EMAIL="treasurer@postgresql.us"
+MEMBERSHIP_SENDER_EMAIL="contact@postgresql.us"
 
 # Organization name
 ORG_NAME="PostgreSQL US"

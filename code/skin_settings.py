@@ -11,6 +11,9 @@ TIME_ZONE = 'US/Central'
 INVOICE_SENDER_EMAIL="treasurer@postgresql.us"
 MEMBERSHIP_SENDER_EMAIL="contact@postgresql.us"
 
+SCHEDULED_JOBS_EMAIL_SENDER="webmaster@postgresql.us"
+SCHEDULED_JOBS_EMAIL="webmaster@postgresql.us"
+
 # Organization name
 ORG_NAME="PostgreSQL US"
 ORG_SHORTNAME="PgUS"

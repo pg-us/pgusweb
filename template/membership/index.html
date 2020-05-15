@@ -1,0 +1,71 @@
+{%extends "nav_account.html"%}
+{%block title%}Membership{%endblock%}
+{%block content%}
+<h1>Your Membership</h1>
+
+{%if not registration_complete%}
+<p>
+You are not currently registered as a member of {{ org_name }}. You can do
+this using the form on this page.  If you are uncertain about anything feel
+free to <a href="/contactus/">contact us</a>.
+</p>
+<p>
+Once you have registered, you will be able to generate an invoice for your
+membership fee.
+<i>Your membership is not active until you have paid the fee!</i>
+</p>
+<p>
+Note that all the information on the form must be filled accurately, or your membership
+will not be valid even if it is fully paid.
+</p>
+{%endif%}
+
+<form method="post" action="." class="pgeuform">{% csrf_token%}
+{%include "forms/form_content.html" %}
+</form>
+
+{%if registration_complete%}
+<h3>Membership Status</h3>
+<div id="membershipinfo">
+{%if member.membersince %}
+<p>You have been a member since {{member.membersince}}.</p>
+{%endif%}
+{%if member.paiduntil %}
+ {%if member.expiressoon %}
+<p>Your membership is currently active but will expire in {{member.paiduntil|timeuntil}} on {{member.paiduntil}}.</p>
+ {%else%}
+<p>Your membership and payment has been registered, and will expire on {{member.paiduntil}}.</p>
+ {%endif%}
+{%else%}
+<p>Your membership will become active once you have paid the fee.</p>
+{%endif%}
+</div>
+{%if member.expiressoon%}
+{%if member.activeinvoice%}
+{%include "invoices/userinvoice_spec.html"%}
+{%else%}
+<p>
+To pay or renew your membership, please use the button below to generate an
+invoice. You will then be able to pay this invoice using several different methods.
+</p>
+<form action="." method="post">{%csrf_token%}
+ <input type="submit" name="submit" value="Generate invoice" class="btn btn-info" />
+</form>
+{%endif%}{%comment%}invoice or not{%endcomment%}
+{%endif%}{%comment%}member.expiressoon{%endcomment%}
+{%endif%}{%comment%}registration_complete{%endcomment%}
+
+{%if logdata%}
+ <h3>Membership activity</h3>
+ <table class="table table-sm">
+  {%for l in logdata%}
+   <tr>
+    <td>{{l.timestamp|date:"Y-m-d H:i"}}&nbsp;&nbsp;</td>
+    <td>{{l.message}}</td>
+   </tr>
+  {%endfor%}
+ </table>
+{%endif%}
+
+
+{%endblock%}

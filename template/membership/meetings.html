@@ -17,7 +17,7 @@ click the link for it, and then follow the instructions on that page.
 <ul>
 {%for m in meetings%}
  <li>{%if m.joining_active%}
-   <a href="{{m.id}}/">{{m.name}}</a> <a href="{{m.id}}/proxy/">proxy</a> voter)
+   <a href="{{m.id}}/">{{m.name}}</a> (<a href="{{m.id}}/proxy/">proxy</a> voter)
    {%else%}
    {{m.name}} (not open yet. <a href="{{m.id}}/proxy/">proxy</a> voter)
    {%endif%} ({{m.dateandtime}})</li>

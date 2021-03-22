@@ -6,7 +6,7 @@ SERVER_EMAIL="webmaster@postgresql.us"
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'US/Central'
+TIME_ZONE = 'US/Pacific'
 
 INVOICE_SENDER_EMAIL="treasurer@postgresql.us"
 MEMBERSHIP_SENDER_EMAIL="contact@postgresql.us"

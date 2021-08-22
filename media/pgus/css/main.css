@@ -2,6 +2,22 @@
 @import url(font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
+/* Utility classes */
+
+.d-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.img-rounded {
+	border-radius: 50%;
+	margin-bottom: 1rem;
+}
+
+.my-4 {
+	margin: 4rem 0;
+}
+
 /* pgeusignupform CSS */
 
 div.pgeusignupform tr.error {

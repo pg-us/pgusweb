@@ -18,6 +18,11 @@
 	margin: 4rem 0;
 }
 
+.w-10 {
+	width: 10rem;
+	height: 10rem;
+}
+
 /* pgeusignupform CSS */
 
 div.pgeusignupform tr.error {

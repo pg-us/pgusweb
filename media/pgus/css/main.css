@@ -1423,3 +1423,21 @@ h4 {
 	    margin: 1rem 0 !important;
 	    font-size: 1.7rem;
 	}
+
+/* Diversity Committee */
+
+	.committee__name {
+		text-align: center;
+		line-height: 1.5rem;
+		font-size: 1rem;
+	}
+
+	.committee__img {
+		width: 10rem;
+	}
+
+	@media screen and (max-width: 736px) {
+		.committee__img {
+			width: 5rem;
+		}
+	}

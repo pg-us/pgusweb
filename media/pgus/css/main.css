@@ -1429,7 +1429,6 @@ h4 {
 	.committee__name {
 		text-align: center;
 		line-height: 1.5rem;
-		font-size: 1.1rem;
 	}
 
 	.committee__img {
@@ -1438,6 +1437,10 @@ h4 {
 	}
 
 	@media screen and (max-width: 736px) {
+		.committee__name {
+			font-size: 1.1rem;
+		}
+
 		.committee__img {
 			width: 5rem;
 			height: 5rem;

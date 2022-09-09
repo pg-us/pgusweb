@@ -1,4 +1,4 @@
-{%load markup%}
+{%load pgmarkdown%}
 <dl class="eventlist">
 {%for event in events%}
 <dt><h4>{%if event.confurl%}<a href="{{event.confurl}}">{{event.conferencename}}</a>{%else%}{{event.conferencename}}{%endif%}</h4></dt>

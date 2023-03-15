@@ -1465,3 +1465,10 @@ dl.eventlist>dd>p {
 	margin: 1rem 0 !important;
 	font-size: 1.7rem;
 }
+
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

@@ -5,7 +5,10 @@
 
 :root {
 	--primary: #336791;
-	--white: #FFFFFF
+	--white: #FFFFFF;
+	--black: #000000;
+	--light-gray: #707279;
+	--dark-gray: #333333;
 }
 
 /* pgeusignupform CSS */
@@ -194,7 +197,7 @@ h1 {
 
 h2 {
 	font-size: 1.7em;
-	font-weight: 100;
+	font-weight: 500;
 }
 
 h3 {
@@ -606,7 +609,7 @@ input[type="radio"]+label:before {
 	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	color: #4C9F70;
+	color: var(--primary);
 	text-decoration: none;
 	border-bottom: none;
 	position: relative;
@@ -1360,7 +1363,6 @@ button:disabled,
 	background-attachment: scroll;
 	background-repeat: no-repeat;
 	text-align: center;
-	/* border-top: 1em solid #5385c1; */
 }
 
 .jumbotron {
@@ -1424,30 +1426,35 @@ button:disabled,
 /* Footer */
 
 footer#footer {
-	border-top: 1px solid #dbdbdb;
-	padding-top: 3em;
+	border-top: 1px solid var(--light-gray);
+	padding-block: 1em;
 }
 
 #footer .copyright {
-	color: #bbb;
+	color: var(--light-gray);
 	font-size: 0.8em;
+	font-weight: 400;
 	display: inline-block;
 }
 
 #footer .copyright a {
-	color: #bbb;
 	text-decoration: none;
 }
 
 #footer .copyright a:hover {
-	color: #bbb;
 	text-decoration: underline;
 }
 
 #footer ul.icons li .icon {
-	font-size: 0.58em;
+	font-size: 1em;
 }
 
+#footer .fa-twitter {
+	color: #55acee;
+}
+#footer .fa-github {
+	color: #333;
+}
 @media screen and (max-width: 736px) {
 
 	#footer .inner {

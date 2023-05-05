@@ -2,27 +2,6 @@
 @import url(font-awesome.min.css);
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
-/* Utility classes */
-
-.d-flex {
-	display: flex;
-	justify-content: space-around;
-}
-
-.img-rounded {
-	border-radius: 50%;
-	margin-bottom: 1rem;
-}
-
-.my-4 {
-	margin: 4rem 0;
-}
-
-.w-10 {
-	width: 10rem;
-	height: 10rem;
-}
-
 /* pgeusignupform CSS */
 
 div.pgeusignupform tr.error {
@@ -1422,27 +1401,4 @@ h4 {
 	dl.eventlist > dd > p {
 	    margin: 1rem 0 !important;
 	    font-size: 1.7rem;
-	}
-
-/* Diversity Committee */
-
-	.committee__name {
-		text-align: center;
-		line-height: 1.5rem;
-	}
-
-	.committee__img {
-		width: 10rem;
-		height: 10rem;
-	}
-
-	@media screen and (max-width: 736px) {
-		.committee__name {
-			font-size: 1.1rem;
-		}
-
-		.committee__img {
-			width: 5rem;
-			height: 5rem;
-		}
 	}

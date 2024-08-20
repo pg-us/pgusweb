@@ -3,13 +3,18 @@
 {%block title%}Welcome{%endblock%}
 {%block layoutblock%}
 
+<!-- Banner -->
+<center>
+  <img src="/media/pgus/images/banner.jpg" class="banner-image">
+</center>
+<h1>United States PostgreSQL Association (PgUS)</h1></center>
+
 <!-- One -->
 <section id="one" class="wrapper">
-  <div class="container">
     <div class="row">
       <div class="col-md-4">
         <header>
-          <h3 class="top2">who we are</h3>
+          <h3 class="top2">Who we are</h3>
         </header>
         <p>
           The United States PostgreSQL Association, affectionately known as PgUS, is a IRS 501(c)(3) public charity. Our purpose is
@@ -21,7 +26,7 @@
       </div>
       <div class="col-md-4">
         <header>
-          <h3 class="top1">membership</h3>
+          <h3 class="top1">Membership</h3>
         </header>
         <p>
           Are you interested in PostgreSQL growth and education? Do you support
@@ -34,12 +39,12 @@
       </div>
       <div class="col-md-4">
         <header>
-          <h3 class="top3">upcoming events</h3>
+          <h3 class="top3">Upcoming Events</h3>
         </header>
         <ul>
-        {%for event in events %}
+          {%for event in events %}
           <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
-        {%endfor%}
+          {%endfor%}
         </ul>
         <footer>
           <a href="/events" class="button special">More</a>
@@ -51,7 +56,6 @@
 
 <!-- News -->
 <section id="three" class="wrapper special style3">
-  <div class="container">
     <header class="text-center">
       <h2>News</h2>
       <p>
@@ -74,11 +78,11 @@
           <header>
             <h3>recent news posts</h3>
           </header>
-            <ul class="alt">
+          <ul class="alt">
             {%for newsitem in news %}
-              <li>{{newsitem.summary|markdown}}</li>
+            <li>{{newsitem.summary|markdown}}</li>
             {%endfor%}
-            </ul>
+          </ul>
         </article>
       </div>
     </div>
@@ -86,5 +90,4 @@
 </section>
 
 {%include "pieces/team_info.html"%}
-
 {%endblock%}

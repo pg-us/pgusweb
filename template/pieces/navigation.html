@@ -64,3 +64,90 @@
     <a href="/membership" class="cs-button-solid cs-nav-button">Your Membership</a>
   </div>
 </header>
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <a href="" class="cs-logo" aria-label="back to home">
+      <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Flogo-black.svg" alt="logo" width="210" height="29"
+        aria-hidden="true" decoding="async">
+    </a>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="" class="cs-li-link cs-active">
+              Home
+            </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">
+              About
+            </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">
+              Services
+            </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">
+              About Us
+            </a>
+          </li>
+          <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+          <li class="cs-li cs-dropdown" tabindex="0">
+            <span class="cs-li-link">
+              Weight Loss
+              <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Semaglutide</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Tirezapetide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link">
+              FAQ
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <a href="" class="cs-button-solid cs-nav-button">Contact Us</a>
+  </div>
+</header>
+
+
+<div style="height:6rem;"></div>

@@ -1,112 +1,135 @@
 <!-- Team -->
-<section id="two" class="wrapper style1 special">
+<section id="two" class="wrapper style1 special" style="padding: 3em;">
   <header>
-      <h2>pgUS board</h2>
+    <h2>pgUS board</h2>
   </header>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="box person">
-          <div class="image round">
-              <img src="/media/pgus/images/a7.jpg" alt="Stacey Haysler" />
-          </div>
-          <h3>Stacey Haysler - President</h3>
-          <p>
-    Stacey Haysler is the CFO and COO of PostgreSQL Experts, Inc. She
-    first became involved in the Postgres community in 2010, and
-    has worked as an organizer and conference staff for a number of
-    conferences, both in North America and Europe, as well as being
-    part of the start up team for PgDay San Francisco. She founded
-    the Django Events Foundation North America (DEFNA), a nonprofit
-    associated with the Django Software Foundation, and was a
-    principal organizer of DjangoConUS for three years. She also
-    served as Treasurer of the DSF for a year while starting DEFNA. She
-    is a PostgreSQL contributor.
-          </p>
+  <div style="
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      width: 100%;
+    ">
+    <style>
+      @media (max-width: 992px) {
+        #two {
+          padding: 1em !important;
+        }
 
-          <p>
-    She worked with the Core Team to develop the PostgreSQL Community
-    Code of Conduct in 2017, and served as the Chair of the Community
-    Code of Conduct Committee through September 2021. Current term runs through April 30, 2025.
-          </p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="box person">
-          <div class="image round">
-              <img src="/media/pgus/images/a1.jpg" alt="Mark Wong" />
-          </div>
-          <h3>Mark Wong - Treasurer</h3>
-          <p>
-            Mark Wong is currently employed by EDB and is a PostgreSQL
-    Major Contributor.  His background is in database systems
-    solutions and performance.  He first introduced himself to the
-    PostgreSQL community in 2003 with open source benchmarking kits
-    and performance data. Since then, he has continued to
-    contribute to various aspects of the community such as a Google
-    Summer of Code mentor, PGConf.US Organizer, Portland PostgreSQL
-    Users Group Co-Organizer, PostgreSQL Fundraising Group Member,
-    and Treasurer and President of PgUS. Current term runs through April 30, 2026.
-          </p>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="box person">
-          <div class="image round">
-              <img src="/media/pgus/images/a6.jpg" alt="Jonathan Katz" />
-          </div>
-          <h3>Jonathan Katz - Director</h3>
-          <p>
-    Jonathan S. Katz is a Principal Product Manager - Technical at
-    Amazon on the Amazon RDS team. Jonathan is also a Core Team
-    Member of the PostgreSQL Project, responsible for advocacy,
-    release and governance efforts and is Secretary and a board
-    member for the nonprofit PostgreSQL Community Association of
-    Canada.
-          </p>
+        #two>div {
+          grid-template-columns: 1fr !important;
+        }
+      }
 
-          <p>
-    Prior to Amazon, Jonathan as VP of Platform Engineering at
-    Crunchy Data. Before that he was CTO at VenueBook and VP of
-    Technology at Paperless Post. At all companies Jonathan developed
-    robust platforms using or delivering PostgreSQL, taking advantage
-    of its many features, from complex data types to its ability to
-    stream logical changes.
-
-          <p>
-    Jonathan graduated from Tufts University with a B.S. in Computer
-    Science and a B.A. in Mathematics. Current term runs through April 30, 2026.
-          </p>
+      .box.person p {
+        margin: 0.5em 0;
+      }
+    </style>
+    <div class="box person">
+      <div class="image round">
+        <img src="/media/pgus/images/a7.jpg" alt="Stacey Haysler" />
       </div>
+      <h3>Stacey Haysler - President</h3>
+      <p>
+        Stacey Haysler is the CFO and COO of PostgreSQL Experts, Inc. She
+        first became involved in the Postgres community in 2010, and
+        has worked as an organizer and conference staff for a number of
+        conferences, both in North America and Europe, as well as being
+        part of the start up team for PgDay San Francisco. She founded
+        the Django Events Foundation North America (DEFNA), a nonprofit
+        associated with the Django Software Foundation, and was a
+        principal organizer of DjangoConUS for three years. She also
+        served as Treasurer of the DSF for a year while starting DEFNA. She
+        is a PostgreSQL contributor.
+      </p>
+      <p>
+        She worked with the Core Team to develop the PostgreSQL Community
+        Code of Conduct in 2017, and served as the Chair of the Community
+        Code of Conduct Committee through September 2021. Current term runs through April 30, 2025.
+      </p>
     </div>
+
+
+    <div class="box person">
+      <div class="image round">
+        <img src="/media/pgus/images/a1.jpg" alt="Mark Wong" />
+      </div>
+      <h3>Mark Wong - Treasurer</h3>
+      <p>
+        Mark Wong is currently employed by EDB and is a PostgreSQL
+        Major Contributor. His background is in database systems
+        solutions and performance. He first introduced himself to the
+        PostgreSQL community in 2003 with open source benchmarking kits
+        and performance data. Since then, he has continued to
+        contribute to various aspects of the community such as a Google
+        Summer of Code mentor, PGConf.US Organizer, Portland PostgreSQL
+        Users Group Co-Organizer, PostgreSQL Fundraising Group Member,
+        and Treasurer and President of PgUS. Current term runs through April 30, 2026.
+      </p>
+    </div>
+
+
+    <div class="box person">
+      <div class="image round">
+        <img src="/media/pgus/images/a6.jpg" alt="Jonathan Katz" />
+      </div>
+      <h3>Jonathan Katz - Director</h3>
+      <p>
+        Jonathan S. Katz is a Principal Product Manager - Technical at
+        Amazon on the Amazon RDS team. Jonathan is also a Core Team
+        Member of the PostgreSQL Project, responsible for advocacy,
+        release and governance efforts and is Secretary and a board
+        member for the nonprofit PostgreSQL Community Association of
+        Canada.
+      </p>
+
+      <p>
+        Prior to Amazon, Jonathan as VP of Platform Engineering at
+        Crunchy Data. Before that he was CTO at VenueBook and VP of
+        Technology at Paperless Post. At all companies Jonathan developed
+        robust platforms using or delivering PostgreSQL, taking advantage
+        of its many features, from complex data types to its ability to
+        stream logical changes.
+
+      <p>
+        Jonathan graduated from Tufts University with a B.S. in Computer
+        Science and a B.A. in Mathematics. Current term runs through April 30, 2026.
+      </p>
+    </div>
+
+
+
+
+    <div class="box person">
+      <div class="image round">
+        <img src="/media/pgus/images/a2.jpg" alt="Michael Brewer" />
+      </div>
+      <h3>Michael Brewer - Secretary</h3>
+      <p>
+        Michael Brewer is a Web Developer Principal in the Franklin College Office
+        of Information Technology at The University of Georgia. Michael's responsibilities
+        include developing applications for intranet and internet use, creating and
+        managing databases, and desktop and network support. One of the applications he
+        developed won a national award for innovation in advising technology. He is one
+        of the founding board members of the United States PostgreSQL Association. Current term runs through April 30,
+        2026.
+      </p>
+    </div>
+
+
+    <div class="box person">
+      <div class="image round">
+        <img src="/media/pgus/images/elizabeth_tiny_headshot.png" alt="Elizabeth Christensen" />
+      </div>
+      <h3>Elizabeth Garrett Christensen - Director</h3>
+      <p>
+        Elizabeth Garrett Christensen works on Postgres educational content at Crunchy Data. She writes blogs,
+        tutorials, and product documentation while also assisting with Postgres product development. Elizabeth
+        organizes the global PostGIS Day and hosts a local Kansas City Postgres User Group. Elizabeth enjoys speaking
+        at Postgres events, open source events, and developer conferences primarily for users new to Postgres or in
+        non-traditional technical roles. Elizabeth has a B.A. in Archeology from the University of Texas and a
+        background in academic publishing software and open-source software. Current term runs through April 30, 2025.
+      </p>
+    </div>
+
   </div>
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="box person">
-        <div class="image round">
-            <img src="/media/pgus/images/a2.jpg" alt="Michael Brewer" />
-        </div>
-        <h3>Michael Brewer - Secretary</h3>
-        <p>
-          Michael Brewer is a Web Developer Principal in the Franklin College Office
-          of Information Technology at The University of Georgia. Michael's responsibilities
-          include developing applications for intranet and internet use, creating and
-          managing databases, and desktop and network support. One of the applications he
-          developed won a national award for innovation in advising technology. He is one
-          of the founding board members of the United States PostgreSQL Association. Current term runs through April 30, 2026.
-        </p>
-      </div>
-    </div>
-      <div class="col-md-4">
-        <div class="box person">
-            <div class="image round">
-                <img src="/media/pgus/images/elizabeth_tiny_headshot.png" alt="Elizabeth Christensen" />
-            </div>
-            <h3>Elizabeth Garrett Christensen - Director</h3>
-            <p>
-              Elizabeth Garrett Christensen works on Postgres educational content at Crunchy Data. She writes blogs, tutorials, and product documentation while also assisting with Postgres product development. Elizabeth organizes the global PostGIS Day and hosts a local Kansas City Postgres User Group. Elizabeth enjoys speaking at Postgres events, open source events, and developer conferences primarily for users new to Postgres or in non-traditional technical roles. Elizabeth has a B.A. in Archeology from the University of Texas and a background in academic publishing software and open-source software. Current term runs through April 30, 2025.
-            </p>
-        </div>
-      </div>
-              </div>
 </section>

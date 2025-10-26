@@ -87,7 +87,7 @@ body {
     padding-left: clamp(1rem, 0.73rem + 1.36vw, 1.875rem);
     padding-right: clamp(1rem, 0.73rem + 1.36vw, 1.875rem);
     position: relative;
-    padding-bottom: clamp(2rem, 1.5rem + 0.75vw, 2.5rem);
+    padding-bottom: clamp(1.5rem, 1rem + 0.75vw, 2rem);
     padding-top: clamp(5rem, 5.5rem + 1vw, 8rem);
   }
   & > svg {

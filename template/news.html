@@ -4,22 +4,22 @@
 {%block layoutblock%}
 <!-- News -->
 <section id="three" class="wrapper special style2">
+  <header>
+    <h2>News</h2>
+    <p>
+      Latest PgUS News
+    </p>
+  </header>
+  <div id="news">
+    {%for newsitem in news %}
     <header>
-      <h2>News</h2>
-      <p>
-        Latest PgUS News
-      </p>
+      <h3>{{newsitem.title}}</h3>
     </header>
-    <div id="news">
-      {%for newsitem in news %}
-        <header>
-          <h3>{{newsitem.title}}</h3>
-        </header>
-        <p>
-          {{newsitem.summary|markdown}}
-        </p>
-        <hr>
-      {%endfor%}
-    </div>
+    <p>
+      {{newsitem.summary|markdown}}
+    </p>
+    <hr>
+    {%endfor%}
+  </div>
 </section>
 {%endblock%}

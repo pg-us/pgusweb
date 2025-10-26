@@ -1,91 +1,99 @@
 {%extends "base_pgus.html" %}
 {%load pgmarkdown%}
 {%block title%}Welcome{%endblock%}
+
+{%block heroblock%}
+<section id="hero" class="large">
+  <div class="outer">
+    <div class="inner">
+      <h1>United States PostgreSQL Association</h1>
+    </div>
+  </div>
+  <svg preserveAspectRatio="none" viewBox="0 0 1440 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="m0 96 80-5.3C160 85 320 75 480 64s320-21 480-21.3c160 .3 320 10.3 400 16l80 5.3V0H0v96Z"></path>
+  </svg>
+</section>
+{%endblock%}
+
 {%block layoutblock%}
-
-<!-- Banner -->
-<center>
-  <img src="/media/pgus/images/banner.jpg" class="banner-image">
-</center>
-<h1>United States PostgreSQL Association (PgUS)</h1></center>
-
 <!-- One -->
 <section id="one" class="wrapper">
-    <div class="row">
-      <div class="col-md-4">
-        <header>
-          <h3 class="top2">Who we are</h3>
-        </header>
-        <p>
-          The United States PostgreSQL Association, affectionately known as PgUS, is a IRS 501(c)(3) public charity. Our purpose is
-          to support the growth and education of PostgreSQL, The World's Most Advanced Open Source Database.
-        </p>
-        <footer>
-          <a href="/aboutus" class="button special">More</a>
-        </footer>
-      </div>
-      <div class="col-md-4">
-        <header>
-          <h3 class="top1">Membership</h3>
-        </header>
-        <p>
-          Are you interested in PostgreSQL growth and education? Do you support
-          PostgreSQL and want to help? By becoming a member you will be helping to support our mission
-          and be able to influence what we do.
-        </p>
-        <footer>
-          <a href="/becomeamember" class="button special">More</a>
-        </footer>
-      </div>
-      <div class="col-md-4">
-        <header>
-          <h3 class="top3">Upcoming Events</h3>
-        </header>
-        <ul>
-          {%for event in events %}
-          <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
-          {%endfor%}
-        </ul>
-        <footer>
-          <a href="/events" class="button special">More</a>
-        </footer>
-      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <header>
+        <h3 class="top2">Who we are</h3>
+      </header>
+      <p>
+        The United States PostgreSQL Association, affectionately known as PgUS, is a IRS 501(c)(3) public charity. Our
+        purpose is
+        to support the growth and education of PostgreSQL, The World's Most Advanced Open Source Database.
+      </p>
+      <footer>
+        <a href="/aboutus" class="button special">More</a>
+      </footer>
     </div>
+    <div class="col-md-4">
+      <header>
+        <h3 class="top1">Membership</h3>
+      </header>
+      <p>
+        Are you interested in PostgreSQL growth and education? Do you support
+        PostgreSQL and want to help? By becoming a member you will be helping to support our mission
+        and be able to influence what we do.
+      </p>
+      <footer>
+        <a href="/becomeamember" class="button special">More</a>
+      </footer>
+    </div>
+    <div class="col-md-4">
+      <header>
+        <h3 class="top3">Upcoming Events</h3>
+      </header>
+      <ul>
+        {%for event in events %}
+        <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
+        {%endfor%}
+      </ul>
+      <footer>
+        <a href="/events" class="button special">More</a>
+      </footer>
+    </div>
+  </div>
   </div>
 </section>
 
 <!-- News -->
 <section id="three" class="wrapper special style3">
-    <header class="text-center">
-      <h2>News</h2>
-      <p>
-        Latest PgUS News
-      </p>
-    </header>
-    <div class="row">
-      <div class="col-md-6">
-        <article>
-          <header>
-            <h3>{{news.0.title}}</h3>
-          </header>
-          <p>
-            {{news.0.summary|markdown}}
-          </p>
-        </article>
-      </div>
-      <div class="col-md-6">
-        <article>
-          <header>
-            <h3>recent news posts</h3>
-          </header>
-          <ul class="alt">
-            {%for newsitem in news %}
-            <li>{{newsitem.summary|markdown}}</li>
-            {%endfor%}
-          </ul>
-        </article>
-      </div>
+  <header class="text-center">
+    <h2>News</h2>
+    <p>
+      Latest PgUS News
+    </p>
+  </header>
+  <div class="row">
+    <div class="col-md-6">
+      <article>
+        <header>
+          <h3>{{news.0.title}}</h3>
+        </header>
+        <p>
+          {{news.0.summary|markdown}}
+        </p>
+      </article>
     </div>
+    <div class="col-md-6">
+      <article>
+        <header>
+          <h3>recent news posts</h3>
+        </header>
+        <ul class="alt">
+          {%for newsitem in news %}
+          <li>{{newsitem.summary|markdown}}</li>
+          {%endfor%}
+        </ul>
+      </article>
+    </div>
+  </div>
   </div>
 </section>
 

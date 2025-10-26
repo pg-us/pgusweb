@@ -5,51 +5,21 @@
 	<meta charset="utf-8">
 	<title>PgUS - {%block title%}{%endblock%}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="/media/pgus/js/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="/media/pgus/js/jquery.matchHeight-min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/media/pgus/css/main.css" />
+	<link rel="stylesheet" href="/media/pgus/css/pgus.css" />
+	<script defer src="/media/pgus/js/jquery.min.js"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script defer src="/media/pgus/js/jquery.matchHeight-min.js"></script>
+	<script defer src="/media/pgus/js/pgus.js"></script>
 	{%block extrahead%}{%endblock%}
 </head>
 
 <body>
 
 	<!-- Header -->
-	<nav id="header" class="navbar">
-		<div id="header-container" class="container navbar-container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-					aria-expanded="false">
-					<i class="fa fa-bars"></i>
-				</button>
-				<a class="navbar-brand" href="/">
-					<h1 class="heading">PgUS</h1>
-				</a>
-				</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item" id="about-us-dropdown">
-						<a href="#" class="dropdown-toggle navbar-link" data-toggle="dropdown" role="button"
-							aria-haspopup="true" aria-expanded="false">About PG US <span class="caret"></span></a>
-						<ul class="dropdown-menu dropdown-menu-dark">
-							<li><a href="/contactus">Contact us</a></li>
-							<li><a href="/corporate">Corporate</a></li>
-							<li><a href="/team">Our Board</a></li>
-							<li><a href="/policies">Policies</a></li>
-						</ul>
-					</li>
-					<a href="/diversity" class="navbar-link">Diversity</a>
-					<a href="/get_involved" class="navbar-link">Get Involved</a>
-					<a href="/becomeamember" class="navbar-link">Join</a>
-					<a href="/donate" class="navbar-link">Donate</a>
-					<a href="/membership">Your Membership</a>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+	{%include "pieces/navigation.html"%}
+	{%block heroblock%}{%endblock%}
 
 	<main class="container">
 		{%block layoutblock%}{%endblock%}
@@ -69,13 +39,14 @@
 						<li><a href="https://twitter.com/pgus" class="icon fa-twitter">
 								<span class="label">Twitter</span>
 							</a></li>
-							<li><a href="https://bsky.app/profile/pgus.bsky.social" class="icon fa-brands fa-bluesky">
+						<li><a href="https://bsky.app/profile/pgus.bsky.social" class="icon fa-brands fa-bluesky">
 								<span class="label">Bluesky</span>
 							</a></li>
-							<li><a href="https://fosstodon.org/@pgus@fosstodon.org" class="icon fa-brands fa-mastodon">
+						<li><a href="https://fosstodon.org/@pgus@fosstodon.org" class="icon fa-brands fa-mastodon">
 								<span class="label">Mastodon</span>
 							</a></li>
-						<li><a href="https://www.linkedin.com/company/united-states-postgresql-association/" class="icon fa-linkedin">
+						<li><a href="https://www.linkedin.com/company/united-states-postgresql-association/"
+								class="icon fa-linkedin">
 								<span class="label">LinkedIn</span>
 							</a></li>
 					</ul>

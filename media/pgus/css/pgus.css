@@ -178,8 +178,8 @@ body {
   }
   #cs-navigation .cs-toggle {
     /* 44px - 48px */
-    width: clamp(2.75rem, 6vw, 3rem);
-    height: clamp(2.75rem, 6vw, 3rem);
+    /* width: clamp(2.75rem, 6vw, 3rem);
+    height: clamp(2.75rem, 6vw, 3rem); */
     margin: 0 0 0 auto;
     background-color: transparent;
     border: none;

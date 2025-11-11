@@ -1271,13 +1271,13 @@ button:disabled,
 		font-size: 2.75em;
 		margin: 0 0 .5em 0;
 		text-align: center;
-		text-transform: lowercase;
+		text-transform: capitalize;
 	}
 
 	#pgContentWrap h2,
 	#pgContentWrap h3 {
 		font-size: 1.35em;
-		text-transform: lowercase;
+		text-transform: capitalize;
 		border-bottom: 1px solid #e5e5e5;
 		margin: 0 0 1em 0;
 		padding: 1em 0;
@@ -1330,7 +1330,7 @@ button:disabled,
 
 #banner {
 	padding: 5em 0;
-	background-image: url('../../../media/pgus/images/banner.jpg');
+	background-image: url('../../../media/pgus/images/temp-banner.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;

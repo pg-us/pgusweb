@@ -20,11 +20,17 @@ These are the PgUS templates which override the PgEU templates.
 * Non-HTML assets will need to be symlinked with `ln -s pgusweb/media/pgus pgeu-system/media`...
 * ...and then excluded from PgEU's git with `echo 'media/pgus' > .git/info/exclude`
 
-## Future Setup Improvements
+### Future Setup Improvements
 
 Relying on Dev Containers is not ideal for non-VSCode users, we should migrate to basic Docker tooling.
 
 The _ideal_ docker setup would also use the `uwsgi` server instead of the Django server. This should remove the need to symlink the PgUS assets.
+
+## Environments
+
+The production website is deployed from `master`.
+
+The test website is deployed from `test`. Ask any existing member for the test site username/password.
 
 ## License
 

@@ -5,7 +5,7 @@
 
 <section id="three" class="wrapper">
     <header class="text-center">
-      <h2>upcoming events</h2>
+      <h2>Upcoming Events</h2>
     </header>
 
     <p>
@@ -13,25 +13,25 @@
       near future.
     </p>
 
-    <h2 class="top1">all events</h2>
+    <h2 class="top1">All Events</h2>
     {%include "events/compacteventlist.inc"%}
 
     {%if regopen%}
-      <h2 class="top2">open for registration</h3>
+      <h2 class="top2">Open For Registration</h3>
       {%include "events/wideeventlist.inc" with events=regopen what="reg"%}
     {%endif%}
 
     {%if cfpopen%}
-      <h2 class="top3">open call for papers</h3>
+      <h2 class="top3">Open Call For Papers</h3>
       {%include "events/wideeventlist.inc" with events=cfpopen what="cfp"%}
     {%endif%}
 
     {%if cfsopen%}
-      <h2 class="top1">open call for sponsors</h3>
+      <h2 class="top1">Open Call For Sponsors</h3>
       {%include "events/wideeventlist.inc" with events=cfsopen what="cfs"%}
     {%endif%}
 
-    <h2 class="top2">past events</h2>
+    <h2 class="top2">Past Events</h2>
     {%include "events/compacteventlist.inc" with events=past%}
     <a href="past/">More past events</a>
 </section>
@@ -799,7 +799,7 @@
 
             <div class="ml-form-embedContent" style=" ">
               
-                <h4>pgUS Events Newsletter</h4>
+                <h4>PgUS Events Newsletter</h4>
                 <p>Signup to stay up to date with all of our events</p>
               
             </div>

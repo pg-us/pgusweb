@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PgUS - {%block title%}{%endblock%}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/media/pgus/css/main.css" /> -->
+  <link rel="stylesheet" href="/media/pgus/css/pgus.css" />
+  <link rel="stylesheet" href="/media/pgus/css/navigation.css" />
+  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script defer src="/media/pgus/js/pgus.js"></script>
+  <script defer src="/media/pgus/js/navigation.js"></script>
+  {%block extrahead%}{%endblock%}
+</head>
+
+<body>
+
+  <!-- Header -->
+  {%include "pieces/navigation.html"%}
+  {%block heroblock%}{%endblock%}
+  {%block layoutblock%}{%endblock%}
+  {%include 'pieces/footer.html'%}
+</body>
+
+</html>

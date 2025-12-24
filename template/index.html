@@ -59,8 +59,8 @@
     </header>
     <div class="pg-row">
       <article>
-        <h3>{{news.0.title}}</h3>
-        {{news.0.summary|markdown}}
+        <h3><a href="{{news.0.itemlink}}">{{news.0.title}}</a></h3>
+        {{news.0.summaryhtml}}
       </article>
 
       <article>
@@ -70,8 +70,8 @@
         <ul>
           {%for newsitem in news|slice:"1:5" %}
           <li>
-            <h3>{{newsitem.title}}</h3>
-            {{newsitem.summary|markdown}}
+            <h4><a href="{{newsitem.itemlink}}">{{newsitem.title}}</a></h4>
+            {{newsitem.summaryhtml}}
           </li>
           {%endfor%}
         </ul>

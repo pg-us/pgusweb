@@ -69,7 +69,10 @@
         </header>
         <ul>
           {%for newsitem in news|slice:"1:5" %}
-          <li>{{newsitem.summary|markdown}}</li>
+          <li>
+            <h3>{{newsitem.title}}</h3>
+            {{newsitem.summary|markdown}}
+          </li>
           {%endfor%}
         </ul>
       </article>

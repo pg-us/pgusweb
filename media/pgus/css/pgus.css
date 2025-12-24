@@ -131,7 +131,7 @@ body {
       display: flex;
       flex-direction: column;
 
-      & ul {
+      & > ul {
         list-style: none;
         padding: 0;
         margin: 0;

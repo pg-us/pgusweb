@@ -123,11 +123,13 @@ body {
   }
 
   & .pg-row {
+    width: 100%;
+
     & > article {
       display: flex;
       flex-direction: column;
-      max-width: 72ch;
-      justify-content: space-around;
+      max-width: 108ch;
+      margin: auto;
 
       & > ul {
         list-style: none;

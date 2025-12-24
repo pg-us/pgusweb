@@ -59,18 +59,10 @@
     </header>
     <div class="pg-row">
       <article>
-        <h3><a href="{{news.0.itemlink}}">{{news.0.title}}</a></h3>
-        {{news.0.summary|markdown}}
-      </article>
-
-      <article>
-        <header>
-          <h3>Recent News Posts</h3>
-        </header>
         <ul>
-          {%for newsitem in news|slice:"1:5" %}
+          {%for newsitem in news %}
           <li>
-            <h4><a href="{{newsitem.itemlink}}">{{newsitem.title}}</a></h4>
+            <h3><a href="{{newsitem.itemlink}}">{{newsitem.title}}</a></h3>
             {{newsitem.summary|markdown}}
           </li>
           {%endfor%}

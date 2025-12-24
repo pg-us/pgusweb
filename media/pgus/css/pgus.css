@@ -123,10 +123,6 @@ body {
   }
 
   & .pg-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(70ch, 1fr));
-
     & > article {
       display: flex;
       flex-direction: column;

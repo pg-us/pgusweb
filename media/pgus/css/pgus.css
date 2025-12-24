@@ -143,6 +143,12 @@ body {
           -webkit-line-clamp: 20;
           -webkit-box-orient: vertical;
           overflow: hidden;
+
+          > .more-link {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-weight: 500;
+          }
         }
       }
     }

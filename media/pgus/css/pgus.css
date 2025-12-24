@@ -139,10 +139,13 @@ body {
           margin-bottom: 0.25rem;
           padding-bottom: 0.25rem;
           border-bottom: 3px solid var(--primary);
-          display: -webkit-box;
-          -webkit-line-clamp: 20;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+
+          > .content {
+            display: -webkit-box;
+            -webkit-line-clamp: 20;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
 
           > .more-link {
             padding-top: 1rem;

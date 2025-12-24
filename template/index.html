@@ -63,7 +63,9 @@
           {%for newsitem in news %}
           <li>
             <h3><a href="{{newsitem.itemlink}}">{{newsitem.title}}</a></h3>
-            {{newsitem.summary|markdown}}
+            <div class="content">
+              {{newsitem.summary|markdown}}
+            </div>
             <a class="more-link" href="{{newsitem.itemlink}}">More</a>
           </li>
           {%endfor%}

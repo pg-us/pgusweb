@@ -126,6 +126,8 @@ body {
     & > article {
       display: flex;
       flex-direction: column;
+      max-width: 72ch;
+      justify-content: space-around;
 
       & > ul {
         list-style: none;
@@ -135,6 +137,10 @@ body {
           margin-bottom: 0.25rem;
           padding-bottom: 0.25rem;
           border-bottom: 3px solid var(--primary);
+          display: -webkit-box;
+          -webkit-line-clamp: 20;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       }
     }

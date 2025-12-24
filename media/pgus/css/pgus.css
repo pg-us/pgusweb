@@ -148,6 +148,11 @@ body {
           padding-bottom: 0.25rem;
           border-bottom: 3px solid var(--primary);
 
+          &:first-child {
+            padding-top: 0.25rem;
+            border-top: 3px solid var(--primary);
+          }
+
           > .content {
             display: -webkit-box;
             -webkit-line-clamp: 20;

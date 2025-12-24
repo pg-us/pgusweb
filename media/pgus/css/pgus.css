@@ -138,6 +138,8 @@ body {
         padding: 0;
         margin: 0;
         > li {
+          display: flex;
+          flex-direction: column;
           margin-bottom: 0.25rem;
           padding-bottom: 0.25rem;
           border-bottom: 3px solid var(--primary);
@@ -153,8 +155,7 @@ body {
             padding-top: 1rem;
             padding-bottom: 1rem;
             font-weight: 500;
-            display: block;
-            float: right;
+            align-self: flex-end;
           }
         }
       }

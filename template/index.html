@@ -1,4 +1,4 @@
-{%extends "base_pgus.html" %}
+{%extends "base_new.html" %}
 {%load pgmarkdown%}
 {%block title%}Welcome{%endblock%}
 
@@ -17,85 +17,63 @@
 
 {%block layoutblock%}
 <!-- One -->
-<section id="one" class="wrapper">
-  <div class="row">
-    <div class="col-md-4">
-      <header>
-        <h3 class="top2">Who We Are</h3>
-      </header>
+<main class="container">
+  <section id="introduction" class="pg-row">
+    <div>
+      <h2>Who We Are</h2>
       <p>
         The United States PostgreSQL Association, affectionately known as PgUS, is a IRS 501(c)(3) public charity. Our
         purpose is
         to support the growth and education of PostgreSQL, the world's most advanced open source database.
       </p>
-      <footer>
-        <a href="/aboutus" class="button special">More</a>
-      </footer>
+      <a href="/aboutus">More</a>
     </div>
-    <div class="col-md-4">
-      <header>
-        <h3 class="top1">Membership</h3>
-      </header>
+    <div>
+      <h2>Membership</h2>
       <p>
         Are you interested in PostgreSQL growth and education? Do you support
         PostgreSQL and want to help? By becoming a member you will be helping to support our mission
         and be able to influence what we do.
       </p>
-      <footer>
-        <a href="/becomeamember" class="button special">More</a>
-      </footer>
+      <a href="/becomeamember">More</a>
     </div>
-    <div class="col-md-4">
-      <header>
-        <h3 class="top3">Upcoming Events</h3>
-      </header>
+    <div>
+      <h2>Upcoming Events</h2>
       <ul>
         {%for event in events %}
         <li><a href="/events/{{event.urlname}}">{{event.conferencename}}</a></li>
         {%endfor%}
       </ul>
-      <footer>
-        <a href="/events" class="button special">More</a>
-      </footer>
+      <a href="/events">More</a>
     </div>
-  </div>
-  </div>
-</section>
+  </section>
 
-<!-- News -->
-<section id="three" class="wrapper special style3">
-  <header class="text-center">
-    <h2>News</h2>
-    <p>
-      Latest PgUS News
-    </p>
-  </header>
-  <div class="row">
-    <div class="col-md-6">
+  <!-- News -->
+  <section id="news">
+    <!-- TODO: Check 'header' semantics -->
+    <header>
+      <h2>News</h2>
+      <h3>
+        Latest PgUS News
+      </h3>
+    </header>
+    <div class="pg-row">
       <article>
-        <header>
-          <h3>{{news.0.title}}</h3>
-        </header>
-        <p>
-          {{news.0.summary|markdown}}
-        </p>
-      </article>
-    </div>
-    <div class="col-md-6">
-      <article>
-        <header>
-          <h3>Recent News Posts</h3>
-        </header>
-        <ul class="alt">
+        <ul>
           {%for newsitem in news %}
-          <li>{{newsitem.summary|markdown}}</li>
+          <li>
+            <h3><a href="{{newsitem.itemlink}}">{{newsitem.title}}</a></h3>
+            <div class="content">
+              {{newsitem.summary|markdown}}
+            </div>
+            <a class="more-link" href="{{newsitem.itemlink}}">Read More</a>
+          </li>
           {%endfor%}
         </ul>
       </article>
     </div>
-  </div>
-  </div>
-</section>
+  </section>
 
-{%include "pieces/team_info.html"%}
+  {%include "pieces/team_info.html"%}
+</main>
 {%endblock%}

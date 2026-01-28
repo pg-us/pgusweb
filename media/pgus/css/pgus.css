@@ -3,6 +3,7 @@
 
 html {
   font-size: 16px;
+  height: 100%;
 }
 
 :root {
@@ -19,6 +20,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", "Gill Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 *,
@@ -26,6 +30,14 @@ body {
 *:after {
   /* prevents padding from affecting height and width */
   box-sizing: border-box;
+}
+
+main.container {
+  flex: 1 0 auto;
+}
+
+#footer-new {
+  flex-shrink: 0;
 }
 
 /* Styling for the swoopy hero sections */

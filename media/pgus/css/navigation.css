@@ -77,7 +77,9 @@
     top: 100%;
     right: 0;
     z-index: -1100;
-    transition: height 0.5s, opacity 0.5s;
+    transition:
+      height 0.5s,
+      opacity 0.5s;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     cursor: pointer;
@@ -165,7 +167,10 @@
   }
   #cs-navigation .cs-line1 {
     top: 0;
-    transition: transform 0.5s, top 0.3s, left 0.3s;
+    transition:
+      transform 0.5s,
+      top 0.3s,
+      left 0.3s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-direction: normal;
@@ -175,7 +180,10 @@
   #cs-navigation .cs-line2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    transition: top 0.3s, left 0.3s, transform 0.5s;
+    transition:
+      top 0.3s,
+      left 0.3s,
+      transform 0.5s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-direction: normal;
@@ -183,7 +191,9 @@
   }
   #cs-navigation .cs-line3 {
     bottom: 0;
-    transition: bottom 0.3s, opacity 0.3s;
+    transition:
+      bottom 0.3s,
+      opacity 0.3s;
   }
   #cs-navigation .cs-ul-wrapper {
     width: 100%;
@@ -198,7 +208,9 @@
     z-index: -1;
     overflow: hidden;
     transform: scaleY(0);
-    transition: transform 0.4s, opacity 0.3s;
+    transition:
+      transform 0.4s,
+      opacity 0.3s;
     transform-origin: top;
   }
   #cs-navigation .cs-ul {
@@ -206,7 +218,7 @@
     height: auto;
     max-height: 65vh;
     margin: 0;
-    padding: 3rem 0 0 0;
+    padding: 3rem 0 0.5em 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -222,7 +234,9 @@
     opacity: 0;
     /* transition from these values */
     transform: translateY(-4.375rem);
-    transition: transform 0.6s, opacity 0.9s;
+    transition:
+      transform 0.6s,
+      opacity 0.9s;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
     transition-delay: 0.05s;
@@ -342,7 +356,11 @@
     align-items: center;
     gap: 0.75rem;
     overflow: hidden;
-    transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s,
+    transition:
+      padding 0.3s,
+      margin 0.3s,
+      height 0.3s,
+      opacity 0.3s,
       visibility 0.3s;
   }
   #cs-navigation .cs-drop-li {
@@ -394,7 +412,10 @@
     z-index: -100;
     overflow: hidden;
     transform: scaleY(0);
-    transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+    transition:
+      transform 0.3s,
+      visibility 0.3s,
+      opacity 0.3s;
     transform-origin: top;
   }
   #cs-navigation .cs-drop-li {
@@ -407,7 +428,9 @@
     opacity: 0;
     display: block;
     transform: translateY(-0.625rem);
-    transition: opacity 0.6s, transform 0.6s;
+    transition:
+      opacity 0.6s,
+      transform 0.6s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(1) {
     transition-delay: 0.05s;
@@ -447,7 +470,9 @@
     padding: 0.75rem;
     color: var(--bodyTextColor);
     display: block;
-    transition: color 0.3s, background-color 0.3s;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover,
   #cs-navigation .cs-li-link.cs-drop-link:focus {

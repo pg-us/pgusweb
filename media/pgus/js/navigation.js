@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var CSbody = document.querySelector("body");
   const CSnavbarMenu = document.querySelector("#cs-navigation");
   const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+  const CSoverlay = document.querySelector("#cs-navigation .cs-overlay");
 
   // Check if navigation elements exist before adding event listeners
   if (CShamburgerMenu && CSnavbarMenu && CSbody) {
@@ -13,6 +14,19 @@ document.addEventListener("DOMContentLoaded", function () {
       CSbody.classList.toggle("cs-open");
       // run the function to check the aria-expanded value
       ariaExpanded();
+    });
+  }
+
+  // Add click handler for overlay to close menu
+  if (CSoverlay && CShamburgerMenu && CSnavbarMenu && CSbody) {
+    CSoverlay.addEventListener("click", function () {
+      CShamburgerMenu.classList.remove("cs-active");
+      CSnavbarMenu.classList.remove("cs-active");
+      CSbody.classList.remove("cs-open");
+      const csUL = document.querySelector("#cs-expanded");
+      if (csUL) {
+        csUL.setAttribute("aria-expanded", "false");
+      }
     });
   }
 

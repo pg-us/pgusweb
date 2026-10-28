@@ -22,6 +22,7 @@ ORG_SHORTNAME="PgUS"
 TREASURER_EMAIL="treasurer@postgresql.us"
 
 ENABLE_PG_COMMUNITY_AUTH = True
+PGAUTH_REDIRECT_SUCCESS = '/account/'
 
 # Currency parameter
 CURRENCY_ABBREV='USD'
